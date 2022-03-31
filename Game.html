@@ -44,12 +44,13 @@
 
     function create ()
     {;
-        this.star = this.add.image(0,0,'star');
+        this.background = this.add.image(0,0,'sky');
         
         this.aGrid=new AlignGrid({scene:this,rows:11,cols:11});
         this.aGrid.showNumbers();
 
-        this.aGrid.placeAtIndex(60,this.star);
+        this.aGrid.placeAtIndex(60,this.background);
+        Align.scaleToGameW(this.background,1);
     }
 
     function update ()
