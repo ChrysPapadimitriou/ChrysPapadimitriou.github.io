@@ -16,8 +16,18 @@
 
     var config = {
         type: Phaser.AUTO,
-        width: 800,
-        height: 600,
+        width: 1024,
+        height: 768,
+        scale: {
+            parent:divId,
+            mode: Phaser.Scale.FIT,
+            autoCenter: Phaser.Scale.CENTER_BOTH,
+            minWidth: 800,
+            minHeight: 600,
+            maxWidth: 1600,
+            maxHeight: 1200,
+        },
+        autoRound: false,
         scene: {
             preload: preload,
             create: create,
