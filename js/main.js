@@ -12,7 +12,7 @@ window.onload = function()
       game=new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.AUTO,"ph_game");  
       console.log("Mobile");
     }
-
+    //keep
     game.state.add("StateMain",StateMain);
     game.state.start("StateMain");
 }
