@@ -9,7 +9,7 @@ class SceneMain extends Phaser.Scene {
     create() {
         console.log("Ready!");
         this.background = this.add.image(0,0,"background");
-        this.background.scale.setTo(4.8);
+        this.background.scale.setTo(4,8);
         //set grid lines to locate positions
         this.aGrid=new AlignGrid({scene:this,rows:11,cols:11});
         this.aGrid.showNumbers();
