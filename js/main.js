@@ -8,7 +8,7 @@ if (isMobile == -1) {
         width: 480,
         height: 640,
         parent: 'phaser-game',
-        scene: [SceneMain]
+        scene: [sceneMain]
     };
 } else {
     var config = {
@@ -16,7 +16,7 @@ if (isMobile == -1) {
         width: window.innerWidth,
         height: window.innerHeight,
         parent: 'phaser-game',
-        scene: [SceneMain]
+        scene: [sceneMain]
     };
 }
 var game = new Phaser.Game(config);
