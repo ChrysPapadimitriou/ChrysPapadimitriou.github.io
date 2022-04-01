@@ -1,18 +1,22 @@
-var game;
-window.onload = function()
-{
-	 var isMobile=navigator.userAgent.indexOf("Mobile");
-
-   if (isMobile==-1)
-    {
-        game=new Phaser.Game(480,640,Phaser.AUTO,"ph_game");
-    }
-    else
-    {       
-      game=new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.AUTO,"ph_game");  
-      console.log("Mobile");
-    }
-    //keep
-    game.state.add("StateMain",StateMain);
-    game.state.start("StateMain");
+var isMobile = navigator.userAgent.indexOf("Mobile");
+if (isMobile == -1) {
+    isMobile = navigator.userAgent.indexOf("Tablet");
 }
+if (isMobile == -1) {
+    var config = {
+        type: Phaser.AUTO,
+        width: 480,
+        height: 640,
+        parent: 'phaser-game',
+        scene: [SceneMain]
+    };
+} else {
+    var config = {
+        type: Phaser.AUTO,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        parent: 'phaser-game',
+        scene: [SceneMain]
+    };
+}
+var game = new Phaser.Game(config);
