@@ -18,5 +18,7 @@ if (isMobile == -1) {
         parent: 'phaser-game',
         scene: [SceneMain]
     };
-}
+    
 var game = new Phaser.Game(config);
+
+}
