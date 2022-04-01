@@ -1,6 +1,6 @@
 class sceneMain extends Phaser.Scene {
     constructor() {
-        super('SceneMain');
+        super('sceneMain');
     }
     preload()
     {
