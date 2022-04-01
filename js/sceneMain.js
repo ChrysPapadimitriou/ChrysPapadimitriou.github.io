@@ -15,8 +15,8 @@ class SceneMain extends Phaser.Scene {
         this.aGrid.showNumbers();
 
         //set background to gridline position 60
-        this.aGrid.PlaceAtIndex(60,this.background);
-        Align.scaleToGameW(this.background,.2);
+        this.aGrid.placeAtIndex(60,this.background);
+        //Align.scaleToGameW(this.background,.2);
     }
     update() {}
 }
