@@ -8,14 +8,14 @@ class SceneMain extends Phaser.Scene {
     }
     create() {
         console.log("Ready!");
-        this.background = this.add.image(0,0,"background");
-        this.background.setScale(4);
+        background = this.add.image(0,0,"background");
+        background.setScale(2);
         //set grid lines to locate positions
         this.aGrid=new AlignGrid({scene:this,rows:11,cols:11});
         this.aGrid.showNumbers();
 
         //set background to gridline position 60
-        this.aGrid.placeAtIndex(60,this.background);
+        this.aGrid.placeAtIndex(60,background);
     }
     update() {}
 }
