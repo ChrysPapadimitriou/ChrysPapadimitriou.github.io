@@ -10,7 +10,7 @@ class SceneMain extends Phaser.Scene {
         let bg = this.add.image(0,0,"background");
         Align.scaleToGameW(this.background,1);
         //set grid lines to locate positions
-        this.aGrid=new AlignGrid({
+        this.blockGrid =new AlignGrid({
             scene:this,
             rows:22,
             cols:22,
