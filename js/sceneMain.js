@@ -7,15 +7,19 @@ class SceneMain extends Phaser.Scene {
         this.load.image("background","assets/background.png");
     }
     create() {
-        console.log("Ready!");
-        this.background = this.add.image(0,0,"background");
+        let bg = this.add.image(0,0,"background");
+        Align.scaleToGameW(this.background,2);
         //set grid lines to locate positions
-        this.aGrid=new AlignGrid({scene:this,rows:11,cols:11});
+        this.aGrid=new AlignGrid({
+            scene:this,
+            rows:22,
+            cols:22,
+            height:bg.displayHeight,
+            width:bg.displayWidth
+        });
         this.aGrid.showNumbers();
 
         //set background to gridline position 60
-        this.aGrid.placeAtIndex(60,this.background);
-        Align.scaleToGameW(this.background,1);
     }
     update() {}
 }
