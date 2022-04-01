@@ -1,6 +1,6 @@
 class SceneMain extends Phaser.Scene {
     constructor() {
-        super();
+        super('SceneMain');
     }
     preload()
     {
@@ -15,7 +15,7 @@ class SceneMain extends Phaser.Scene {
 
         //set background to gridline position 60
         this.aGrid.placeAtIndex(60,this.background);
-        AlignGrid.scaleToGameW(this.background,.2);
+        Align.scaleToGameW(this.background,3);
     }
     update() {}
 }
