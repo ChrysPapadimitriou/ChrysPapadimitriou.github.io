@@ -21,6 +21,7 @@ export class SceneMain extends BaseScene {
         //
         this.aGrid.showNumbers();
         //
+        this.placeImage('face',60,.25);
         //
         //
         this.makeUi();     
