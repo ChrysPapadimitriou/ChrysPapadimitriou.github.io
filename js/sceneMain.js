@@ -17,7 +17,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        this.aGrid.showNumbers();
+        this.blockGrid.showNumbers();
 
         //set background to gridline position 60
 
