@@ -12,13 +12,14 @@ class SceneMain extends Phaser.Scene {
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
             scene:this,
-            rows:11,
-            cols:11,
+            rows:22,
+            cols:22,
             height:bg.displayHeight,
             width:bg.displayWidth
         });
         this.blockGrid.showNumbers();
-
+        this.blockGrid.placeAtIndex(120,bg);
+        window.scene=this;
         //set background to gridline position 60
 
     }
