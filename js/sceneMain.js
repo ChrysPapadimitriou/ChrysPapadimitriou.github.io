@@ -10,10 +10,11 @@ class SceneMain extends Phaser.Scene {
         let bg = this.add.image(0,0,"background");
         
         bg.displayHeight = this.sys.game.config.height;
-        bg.scaleX = bg.scaleY;
+        bg.displayWidth = this.sys.game.config.width;
+       // bg.scaleX = bg.scaleY;
 
-        bg.y= game.config.height;
-        bg.x= game.config.width;
+        bg.y= game.config.height/2;
+        bg.x= game.config.width/2;
 
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
