@@ -1,7 +1,7 @@
 {
 	"textures": [
 		{
-			"image": "bird-0.png",
+			"image": "bird.png",
 			"format": "RGBA8888",
 			"size": {
 				"w": 1422,
