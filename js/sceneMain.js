@@ -27,7 +27,7 @@ class SceneMain extends Phaser.Scene {
         //});
         //this.blockGrid.showNumbers();
 
-        this.bird = this.add.sprite(300,300,"plane");
+        this.plane = this.add.sprite(300,300,"plane");
         var frameNames = this.textures.get("plane").getFrameNames();
         console.log(frameNames);
         this.anims.create({
@@ -45,7 +45,7 @@ class SceneMain extends Phaser.Scene {
             frameRate: 8,
             repeat: -1
             });
-            this.bird.play("move");
+            this.plane.play("move");
 
     }
     update() {}
