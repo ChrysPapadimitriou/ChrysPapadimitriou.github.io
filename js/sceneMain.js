@@ -5,7 +5,7 @@ class SceneMain extends Phaser.Scene {
     preload()
     {
         this.load.image("background","assets/background.png");
-        this.load.atlas("plane","assets/plane.png","assets/plane.json");
+        this.load.atlas("bird","assets/bird.png","assets/bird.json");
     }
     create() {
         let bg = this.add.image(0,0,"background");
@@ -27,26 +27,21 @@ class SceneMain extends Phaser.Scene {
         //});
         //this.blockGrid.showNumbers();
 
-        this.plane = this.add.sprite(300,300,"plane");
-        var frameNames = this.textures.get("plane").getFrameNames();
+        this.bird = this.add.sprite(300,300,"bird");
+        var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
-        this.anims.create({
+        this.makeAnims();
+        this.bird.play("move");
+        window.ninja = this.ninja;
+    }
+    makeAnims() {
+        this.makeAnims.create({
             key: "move",
-            frames: [{
-                key: "plane",
-                Frame: "Fly (1).png"
-            }, {
-                key: "plane",
-                Frame: "Fly (2).png"
-            }, {
-                key: "plane",
-                Frame: "Shoot (1).png"
-            }],
+            frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
             frameRate: 8,
             repeat: -1
-            });
-            this.plane.play("move");
-
+        })
     }
+    
     update() {}
 }

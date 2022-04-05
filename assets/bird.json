@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "Frame-1.png",
+					"filename": "Move__000.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "frame-2.png",
+					"filename": "Move__001.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -52,7 +52,7 @@
 					}
 				},
 				{
-					"filename": "frame-3.png",
+					"filename": "Move__002.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -73,7 +73,7 @@
 					}
 				},
 				{
-					"filename": "frame-4.png",
+					"filename": "Move__003.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
