@@ -12,8 +12,8 @@ class SceneMain extends Phaser.Scene {
         bg.displayHeight = this.sys.game.config.height;
         bg.scaleX = bg.scaleY;
 
-        bg.y= game.config.height/2;
-        bg.x= game.config.width/2;
+        bg.y= game.config.height;
+        bg.x= game.config.width;
 
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
