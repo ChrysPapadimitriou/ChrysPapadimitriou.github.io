@@ -37,13 +37,13 @@ class SceneMain extends Phaser.Scene {
                 Frame: "Frame-1.png"
             }, {
                 key: "bird",
-                Frame: "Frame-2.png"
+                Frame: "frame-2.png"
             }, {
                 key: "bird",
-                Frame: "Frame-3.png"
+                Frame: "frame-3.png"
             }, {
                 key: "bird",
-                Frame: "Frame-4.png"
+                Frame: "frame-4.png"
             }],
             frameRate: 20,
             repeat: -1
