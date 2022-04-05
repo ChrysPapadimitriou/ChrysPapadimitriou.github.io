@@ -33,12 +33,19 @@ class SceneMain extends Phaser.Scene {
         
         this.anims.create({
             key: "move",
-            frames: [
-            { key: "ninja’,frame:”Frame-1.png"},
-            { key: "ninja’,frame:”Frame-2.png"},
-            { key: "ninja’,frame:”Frame-3.png"},
-            { key: "ninja’,frame:”Frame-4.png"},
-            ],
+            frames: [{
+                key: "bird",
+                Frame: "Frame-1.png"
+            }, {
+                key: "bird",
+                Frame: "Frame-2.png"
+            }, {
+                key: "bird",
+                Frame: "Frame-3.png"
+            }, {
+                key: "bird",
+                Frame: "Frame-4.png"
+            }],
             frameRate: 4,
             repeat: -1
             });
