@@ -5,6 +5,7 @@ class SceneMain extends Phaser.Scene {
     preload()
     {
         this.load.image("background","assets/background.png");
+        this.load.atlas("bird","assets/bird.png","assets/bird.json");
     }
     create() {
         let bg = this.add.image(0,0,"background");
@@ -26,7 +27,22 @@ class SceneMain extends Phaser.Scene {
         });
         this.blockGrid.showNumbers();
 
-        //set background to gridline position 60
+        this.bird = this.add.sprite(200,200,"bird");
+        var frameNames = this.textures.get("bird").getFrameNames();
+        console.log(frameNames);
+        
+        this.anims.create({
+            key: "move",
+            frames: [
+            { key: "ninja’,frame:”Frame-1.png"},
+            { key: "ninja’,frame:”Frame-2.png"},
+            { key: "ninja’,frame:”Frame-3.png"},
+            { key: "ninja’,frame:”Frame-4.png"},
+            ],
+            frameRate: 4,
+            repeat: -1
+            });
+            this.bird.play("move");
 
     }
     update() {}
