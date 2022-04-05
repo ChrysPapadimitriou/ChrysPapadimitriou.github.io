@@ -46,7 +46,7 @@ class SceneMain extends Phaser.Scene {
                 key: "bird",
                 Frame: "Frame-4.png"
             }],
-            frameRate: 4,
+            frameRate: 20,
             repeat: -1
             });
             this.bird.play("move");
