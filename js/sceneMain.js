@@ -31,7 +31,7 @@ class SceneMain extends Phaser.Scene {
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.anims.create({
-            key: "Frame",
+            key: "move",
             frames: [{
                 key: "bird",
                 Frame: "Frame-1.png"
@@ -45,10 +45,10 @@ class SceneMain extends Phaser.Scene {
                 key: "bird",
                 Frame: "frame-4.png"
             }],
-            frameRate: 20,
+            frameRate: 8,
             repeat: -1
             });
-            this.bird.play("Frame");
+            this.bird.play("move");
 
     }
     update() {}
