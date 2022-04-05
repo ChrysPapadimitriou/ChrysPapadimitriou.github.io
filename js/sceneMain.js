@@ -18,14 +18,14 @@ class SceneMain extends Phaser.Scene {
         bg.x= game.config.width/2;
 
         //set grid lines to locate positions
-        this.blockGrid =new AlignGrid({
-            scene:this,
-            rows:33,
-            cols:33,
-            height:bg.displayHeight,
-            width:bg.displayWidth
-        });
-        this.blockGrid.showNumbers();
+        //this.blockGrid =new AlignGrid({
+        //    scene:this,
+        //    rows:33,
+        //    cols:33,
+        //    height:bg.displayHeight,
+        //    width:bg.displayWidth
+        //});
+        //this.blockGrid.showNumbers();
 
         this.bird = this.add.sprite(200,200,"bird");
         var frameNames = this.textures.get("bird").getFrameNames();
