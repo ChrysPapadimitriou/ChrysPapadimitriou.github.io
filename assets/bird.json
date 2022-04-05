@@ -1,7 +1,7 @@
 {
 	"textures": [
 		{
-			"image": "bird-0.png",
+			"image": "bird.png",
 			"format": "RGBA8888",
 			"size": {
 				"w": 1422,
@@ -99,6 +99,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:f71a839e111553d1f8a2c3ae6f499204:a465ab1be3a5d41500203e434343b2e6:891129d2469a49e1783ceb14eafaec27$"
+		"smartupdate": "$TexturePacker:SmartUpdate:fddfa11aa03f2bd4d6c17d270d0fdb29:a465ab1be3a5d41500203e434343b2e6:6a1677158d465170d66e062b762d8e2a$"
 	}
 }

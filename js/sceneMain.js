@@ -5,7 +5,7 @@ class SceneMain extends Phaser.Scene {
     preload()
     {
         this.load.image("background","assets/background.png");
-        this.load.atlas("bird","assets/bird-0.png","assets/bird.json");
+        this.load.atlas("bird","assets/bird.png","assets/bird.json");
     }
     create() {
         let bg = this.add.image(0,0,"background");
@@ -27,7 +27,7 @@ class SceneMain extends Phaser.Scene {
         //});
         //this.blockGrid.showNumbers();
 
-        this.bird = this.add.sprite(300,300,"bird-0");
+        this.bird = this.add.sprite(300,300,"bird");
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.anims.create({
