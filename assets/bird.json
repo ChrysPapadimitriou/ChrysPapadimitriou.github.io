@@ -4,8 +4,8 @@
 			"image": "bird.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1438,
-				"h": 1224
+				"w": 1434,
+				"h": 1220
 			},
 			"scale": 1,
 			"frames": [
@@ -24,8 +24,8 @@
 						"h": 610
 					},
 					"frame": {
-						"x": 1,
-						"y": 1,
+						"x": 0,
+						"y": 0,
 						"w": 717,
 						"h": 610
 					}
@@ -45,8 +45,8 @@
 						"h": 610
 					},
 					"frame": {
-						"x": 720,
-						"y": 1,
+						"x": 717,
+						"y": 0,
 						"w": 717,
 						"h": 610
 					}
@@ -66,8 +66,8 @@
 						"h": 610
 					},
 					"frame": {
-						"x": 1,
-						"y": 613,
+						"x": 0,
+						"y": 610,
 						"w": 717,
 						"h": 610
 					}
@@ -87,8 +87,8 @@
 						"h": 610
 					},
 					"frame": {
-						"x": 720,
-						"y": 613,
+						"x": 717,
+						"y": 610,
 						"w": 717,
 						"h": 610
 					}
@@ -99,6 +99,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:7d0c8433aaa96407f977ba20b20f24bb:a465ab1be3a5d41500203e434343b2e6:6a1677158d465170d66e062b762d8e2a$"
+		"smartupdate": "$TexturePacker:SmartUpdate:4a92de85f9cd54cb3f7de4046c05805a:a465ab1be3a5d41500203e434343b2e6:6a1677158d465170d66e062b762d8e2a$"
 	}
 }
