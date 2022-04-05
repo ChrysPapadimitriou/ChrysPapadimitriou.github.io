@@ -30,18 +30,32 @@ class SceneMain extends Phaser.Scene {
         this.bird = this.add.sprite(300,300,"bird");
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
-        this.makeAnims();
-        this.bird.play("move");
-        window.ninja = this.ninja;
-    }
-    makeAnims() {
-        this.makeAnims.create({
+        this.anims.create({
             key: "move",
-            frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
+            frames: [{
+                key: "bird",
+                Frame: "Move__000.png"
+            }, {
+                key: "bird",
+                Frame: "Move__001.png"
+            }, {
+                key: "bird",
+                Frame: "Move__002.png"
+            }],
             frameRate: 8,
             repeat: -1
-        })
+        });
+        this.bird.play("move");
+        
     }
-    
     update() {}
 }
+/*
+makeAnims() {
+    this.makeAnims.create({
+        key: "move",
+        frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
+        frameRate: 8,
+        repeat: -1
+    })
+} */
