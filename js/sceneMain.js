@@ -27,10 +27,9 @@ class SceneMain extends Phaser.Scene {
         //});
         //this.blockGrid.showNumbers();
 
-        this.bird = this.add.sprite(200,200,"bird");
+        this.bird = this.add.sprite(300,300,"bird");
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
-        
         this.anims.create({
             key: "move",
             frames: [{
