@@ -25,9 +25,9 @@ class SceneMain extends Phaser.Scene {
         this.Left = this.add.image(0,0,"Left");
         Align.scaleToGameW(this.Left,0.15);
         this.Logo = this.add.image(0,0,"UniLogo");
-        Align.scaleToGameW(this.Logo,0.1);
-        this.Title = this.add.image(0,0,"Title");
-        Align.scaleToGameW(this.Title,0,5);
+        Align.scaleToGameW(this.Logo,0.15);
+        this.title = this.add.image(0,0,"Title");
+        Align.scaleToGameW(this.title,0,5);
         
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
@@ -42,7 +42,7 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(103,this.Left);
         this.blockGrid.placeAtIndex(105,this.Right);
         this.blockGrid.placeAtIndex(61,this.Logo);
-        this.blockGrid.placeAtIndex(17,this.Title);
+        this.blockGrid.placeAtIndex(17,this.title);
 
         this.bird = this.add.sprite(300,300,"bird");
         Align.scaleToGameW(this.bird,0.2);
