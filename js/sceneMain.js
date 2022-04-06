@@ -6,26 +6,35 @@ class SceneMain extends Phaser.Scene {
     {
         this.load.image("background","assets/background.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
+        this.load.image("Right","assets/Right.png");
+        this.load.image("Left","assets/Left.png");
     }
     create() {
         let bg = this.add.image(0,0,"background");
         
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width;
-       // bg.scaleX = bg.scaleY;
 
         bg.y= game.config.height/2;
         bg.x= game.config.width/2;
 
+        this.Right = this.add.image(0,0,"Right");
+        Align.scaleToGameW(this.Right,0.2);
+        this.Left = this.add.image(0,0,"Left");
+        Align.scaleToGameW(this.Left,0.2);
+        
         //set grid lines to locate positions
-        //this.blockGrid =new AlignGrid({
-        //    scene:this,
-        //    rows:33,
-        //    cols:33,
-        //    height:bg.displayHeight,
-        //    width:bg.displayWidth
-        //});
-        //this.blockGrid.showNumbers();
+        this.blockGrid =new AlignGrid({
+            scene:this,
+            rows:11,
+            cols:11,
+            height:bg.displayHeight,
+            width:bg.displayWidth
+        });
+        this.blockGrid.showNumbers();
+
+        this.blockGrid.placeAtIndex(40,this.Left);
+        this.blockGrid.placeAtIndex(80,this.Right);
 
         this.bird = this.add.sprite(300,300,"bird");
         Align.scaleToGameW(this.bird,0.2);
