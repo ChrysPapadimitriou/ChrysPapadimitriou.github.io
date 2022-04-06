@@ -31,10 +31,29 @@ class SceneMain extends Phaser.Scene {
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.makeAnims();
-        this.bird.play("move");
-        
+        window.bird = this.bird;
     }
     makeAnims() {
+        this.makeAnims.create({
+            key: 'move',
+            frames: this.anims.generateFrameNames("bird", {start:0, end:8, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
+            frameRate: 8,
+            repeat: -1
+        })
+    }
+    update() {}
+}
+/*
+makeAnims() {
+    this.makeAnims.create({
+        key: "move",
+        frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
+        frameRate: 8,
+        repeat: -1
+    })
+} */
+
+/*    makeAnims() {
         this.anims.create({
             key: "move",
             frames: [{
@@ -50,15 +69,4 @@ class SceneMain extends Phaser.Scene {
             frameRate: 8,
             repeat: -1
         });
-    }
-    update() {}
-}
-/*
-makeAnims() {
-    this.makeAnims.create({
-        key: "move",
-        frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
-        frameRate: 8,
-        repeat: -1
-    })
-} */
+    }*/
