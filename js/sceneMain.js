@@ -34,7 +34,7 @@ class SceneMain extends Phaser.Scene {
         window.bird = this.bird;
     }
     makeAnims() {
-        this.makeAnims.create({
+        this.anims.create({
             key: 'move',
             frames: this.anims.generateFrameNames("bird", {start:0, end:8, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
             frameRate: 8,
