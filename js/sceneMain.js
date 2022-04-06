@@ -28,18 +28,25 @@ class SceneMain extends Phaser.Scene {
         //this.blockGrid.showNumbers();
 
         this.bird = this.add.sprite(300,300,"bird");
+        Align.scaleToGameW(this.bird,0.2);
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.makeAnims();
         
         window.bird = this.bird;
-        bird.play("move");
+        //bird.play("moveR");
     }
     makeAnims() {
         this.anims.create({
-            key: 'move',
-            frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
-            frameRate: 8,
+            key: 'moveR',
+            frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"MoveR__", suffix: ".png"}),
+            frameRate: 10,
+            repeat: -1
+        })
+        this.anims.create({
+            key: 'moveL',
+            frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"MoveL__", suffix: ".png"}),
+            frameRate: 10,
             repeat: -1
         })
     }

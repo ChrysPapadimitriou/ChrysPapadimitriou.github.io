@@ -4,13 +4,97 @@
 			"image": "bird.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1422,
-				"h": 1124
+				"w": 2840,
+				"h": 1202
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "Move__000.png",
+					"filename": "MoveL__000.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 717,
+						"h": 610
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 6,
+						"w": 709,
+						"h": 521
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 709,
+						"h": 521
+					}
+				},
+				{
+					"filename": "MoveL__001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 717,
+						"h": 610
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 6,
+						"w": 709,
+						"h": 521
+					},
+					"frame": {
+						"x": 712,
+						"y": 1,
+						"w": 709,
+						"h": 521
+					}
+				},
+				{
+					"filename": "MoveL__002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 717,
+						"h": 610
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 6,
+						"w": 707,
+						"h": 599
+					},
+					"frame": {
+						"x": 1423,
+						"y": 1,
+						"w": 707,
+						"h": 599
+					}
+				},
+				{
+					"filename": "MoveL__003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 717,
+						"h": 610
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 6,
+						"w": 707,
+						"h": 553
+					},
+					"frame": {
+						"x": 2132,
+						"y": 1,
+						"w": 707,
+						"h": 553
+					}
+				},
+				{
+					"filename": "MoveR__000.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -25,13 +109,13 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 1,
+						"y": 602,
 						"w": 709,
 						"h": 521
 					}
 				},
 				{
-					"filename": "Move__001.png",
+					"filename": "MoveR__001.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -46,13 +130,13 @@
 					},
 					"frame": {
 						"x": 712,
-						"y": 1,
+						"y": 602,
 						"w": 709,
 						"h": 521
 					}
 				},
 				{
-					"filename": "Move__002.png",
+					"filename": "MoveR__002.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -66,14 +150,14 @@
 						"h": 599
 					},
 					"frame": {
-						"x": 1,
-						"y": 524,
+						"x": 1423,
+						"y": 602,
 						"w": 707,
 						"h": 599
 					}
 				},
 				{
-					"filename": "Move__003.png",
+					"filename": "MoveR__003.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -87,8 +171,8 @@
 						"h": 553
 					},
 					"frame": {
-						"x": 710,
-						"y": 524,
+						"x": 2132,
+						"y": 602,
 						"w": 707,
 						"h": 553
 					}
@@ -99,6 +183,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:fddfa11aa03f2bd4d6c17d270d0fdb29:a465ab1be3a5d41500203e434343b2e6:6a1677158d465170d66e062b762d8e2a$"
+		"smartupdate": "$TexturePacker:SmartUpdate:066637d87377ebf2115f803d5afc4760:c3d4d96c49910fef35f9e454b2cfaf43:891129d2469a49e1783ceb14eafaec27$"
 	}
 }
