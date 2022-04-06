@@ -19,9 +19,9 @@ class SceneMain extends Phaser.Scene {
         bg.x= game.config.width/2;
 
         this.Right = this.add.image(0,0,"Right");
-        Align.scaleToGameW(this.Right,0.2);
+        Align.scaleToGameW(this.Right,0.1);
         this.Left = this.add.image(0,0,"Left");
-        Align.scaleToGameW(this.Left,0.2);
+        Align.scaleToGameW(this.Left,0.1);
         
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
@@ -33,8 +33,8 @@ class SceneMain extends Phaser.Scene {
         });
         this.blockGrid.showNumbers();
 
-        this.blockGrid.placeAtIndex(40,this.Left);
-        this.blockGrid.placeAtIndex(80,this.Right);
+        this.blockGrid.placeAtIndex(105,this.Left);
+        this.blockGrid.placeAtIndex(103,this.Right);
 
         this.bird = this.add.sprite(300,300,"bird");
         Align.scaleToGameW(this.bird,0.2);
