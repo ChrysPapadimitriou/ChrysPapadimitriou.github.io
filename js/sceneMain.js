@@ -43,7 +43,7 @@ class SceneMain extends Phaser.Scene {
         this.makeAnims();
         
         window.bird = this.bird;
-        //bird.play("moveR");
+        bird.play("moveR");
     }
     makeAnims() {
         this.anims.create({
