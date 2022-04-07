@@ -44,8 +44,9 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(61,this.Logo);
         this.blockGrid.placeAtIndex(17,this.title);
 
-        this.bird = this.add.sprite(300,300,"bird");
-        Align.scaleToGameW(this.bird,0.2);
+        this.bird = this.add.sprite(0,0,"bird");
+        Align.scaleToGameW(this.bird,0.15);
+        this.blockGrid.placeAtIndex(50,this.bird);
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.makeAnims();
