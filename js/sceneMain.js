@@ -9,7 +9,7 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Right","assets/Right.png");
         this.load.image("Left","assets/Left.png");
         this.load.image("UniLogo","assets/UniLogo.png");
-        this.load.image("Title","assets/banner.png");
+        this.load.image("banner","assets/banner.png");
     }
     create() {
         let bg = this.add.image(0,0,"background");
@@ -26,8 +26,8 @@ class SceneMain extends Phaser.Scene {
         Align.scaleToGameW(this.Left,0.15);
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.15);
-        this.title = this.add.image(0,0,"Title");
-        Align.scaleToGameW(this.title,0,5);
+        this.banner = this.add.image(0,0,"banner");
+        Align.scaleToGameW(this.banner,0,5);
         
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
@@ -42,7 +42,7 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(103,this.Left);
         this.blockGrid.placeAtIndex(105,this.Right);
         this.blockGrid.placeAtIndex(61,this.Logo);
-        this.blockGrid.placeAtIndex(17,this.title);
+        this.blockGrid.placeAtIndex(17,this.banner);
 
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.15);
