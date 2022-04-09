@@ -9,7 +9,7 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Right","assets/Right.png");
         this.load.image("Left","assets/Left.png");
         this.load.image("UniLogo","assets/UniLogo.png");
-        this.load.image("Title","assets/Title.png");
+        this.load.image("Title","assets/banner.png");
     }
     create() {
         let bg = this.add.image(0,0,"background");
