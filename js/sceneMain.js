@@ -42,7 +42,7 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(103,this.Left);
         this.blockGrid.placeAtIndex(105,this.Right);
         this.blockGrid.placeAtIndex(61,this.Logo);
-        this.blockGrid.placeAtIndex(17,this.banner);
+        this.blockGrid.placeAtIndex(34,this.banner);
 
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.15);
