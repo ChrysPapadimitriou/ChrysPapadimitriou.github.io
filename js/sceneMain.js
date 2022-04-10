@@ -8,8 +8,8 @@ class SceneMain extends Phaser.Scene {
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
         this.load.image("Right","assets/Right.png");
         this.load.image("Left","assets/Left.png");
-        this.load.image("UniLogo","assets/UniLogo.png");
         this.load.image("banner","assets/banner.png");
+        this.load.image("UniLogo","assets/UniLogo.png");
     }
     create() {
         let bg = this.add.image(0,0,"background");
