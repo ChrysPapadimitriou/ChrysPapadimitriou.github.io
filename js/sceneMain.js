@@ -26,13 +26,13 @@ class SceneMain extends Phaser.Scene {
         this.Welcome = this.add.image(0,0,"Welcome");
         Align.scaleToGameW(this.Welcome,0.20);
         this.Flag = this.add.image(0,0,"Flag");
-        Align.scaleToGameW(this.Flag,0.20);
+        Align.scaleToGameW(this.Flag,0.25);
         this.Right = this.add.image(0,0,"Right");
         Align.scaleToGameW(this.Right,0.15);
         this.Left = this.add.image(0,0,"Left");
         Align.scaleToGameW(this.Left,0.15);
         this.Logo = this.add.image(0,0,"UniLogo");
-        Align.scaleToGameW(this.Logo,0.12);
+        Align.scaleToGameW(this.Logo,0.10);
         
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
@@ -46,21 +46,21 @@ class SceneMain extends Phaser.Scene {
 
         this.blockGrid.placeAtIndex(181,this.Welcome);
         this.blockGrid.placeAtIndex(511,this.Flag);
-        this.blockGrid.placeAtIndex(972,this.Left);
-        this.blockGrid.placeAtIndex(974,this.Right);
+        this.blockGrid.placeAtIndex(971,this.Left);
+        this.blockGrid.placeAtIndex(975,this.Right);
         this.blockGrid.placeAtIndex(511,this.Logo);
 
         this.bird = this.add.sprite(0,0,"bird");
-        Align.scaleToGameW(this.bird,0.10);
+        Align.scaleToGameW(this.bird,0.9);
         this.blockGrid.placeAtIndex(926,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.05);
-        this.blockGrid.placeAtIndex(4,this.LeftHold);
+        this.blockGrid.placeAtIndex(118,this.LeftHold);
 
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.05);
-        this.blockGrid.placeAtIndex(6,this.RightHold);
+        this.blockGrid.placeAtIndex(112,this.RightHold);
 
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
