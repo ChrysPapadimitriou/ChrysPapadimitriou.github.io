@@ -6,7 +6,7 @@ class SceneMain extends Phaser.Scene {
     {
         this.load.image("background","assets/background.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
-        this.load.atlas("bird","assets/cloud.png","assets/cloud.json");
+        this.load.atlas("cloud","assets/cloud.png","assets/cloud.json");
         this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
         this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
