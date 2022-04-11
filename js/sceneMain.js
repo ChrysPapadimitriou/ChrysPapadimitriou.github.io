@@ -6,6 +6,7 @@ class SceneMain extends Phaser.Scene {
     {
         this.load.image("background","assets/background.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
+        this.load.atlas("bird","assets/cloud.png","assets/cloud.json");
         this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
         this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
@@ -58,13 +59,13 @@ class SceneMain extends Phaser.Scene {
         Align.scaleToGameW(this.LeftHold,0.04);
         this.blockGrid.placeAtIndex(76-20,this.LeftHold);
 //
-        this.RightHold2 = this.add.sprite(0,0,"RightHold");
-        Align.scaleToGameW(this.RightHold2,0.05);
-        this.blockGrid.placeAtIndex(139-0.2,this.RightHold2);
-
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.04);
         this.blockGrid.placeAtIndex(76-24,this.RightHold);
+
+        this.cloud = this.add.sprite(0,0,"cloud");
+        Align.scaleToGameW(this.cloud,0.05);
+        this.blockGrid.placeAtIndex(139-0.2,this.cloud);
 
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
@@ -77,7 +78,7 @@ class SceneMain extends Phaser.Scene {
         bird.play("moveR");
         LeftHold.play("left");
         RightHold.play("right");
-        RightHold2.play("right");
+        cloud.play("move");
 
     }
     makeAnims() {
@@ -106,9 +107,9 @@ class SceneMain extends Phaser.Scene {
             repeat: -1
         })
         this.anims.create({
-            key: 'left2',
-            frames: this.anims.generateFrameNames("LeftHold2", {start:0, end:1, zeroPad: 3, prefix:"MoveL__", suffix: ".png"}),
-            frameRate: 10,
+            key: 'move',
+            frames: this.anims.generateFrameNames("LeftHold2", {start:0, end:2, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
+            frameRate: 3,
             repeat: -1
         })
     }
