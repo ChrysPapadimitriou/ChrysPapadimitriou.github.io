@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "RightHold.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 848,
+				"h": 382
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "MoveR__1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 492,
+						"h": 409
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 18,
+						"w": 467,
+						"h": 376
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 467,
+						"h": 376
+					}
+				},
+				{
+					"filename": "MoveR__2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 492,
+						"h": 409
+					},
+					"spriteSourceSize": {
+						"x": 102,
+						"y": 18,
+						"w": 377,
+						"h": 380
+					},
+					"frame": {
+						"x": 470,
+						"y": 1,
+						"w": 377,
+						"h": 380
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:73f244b1692854e8fb22a0e688f1b5e9:df6801c9d5fd8daa441891d8355ba2a4:9726d96e81683cba6a8247a61922e3c9$"
+	}
+}

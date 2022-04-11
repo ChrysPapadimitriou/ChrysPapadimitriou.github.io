@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "LeftHold.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 848,
+				"h": 382
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "MoveL__1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 492,
+						"h": 409
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 18,
+						"w": 467,
+						"h": 376
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 467,
+						"h": 376
+					}
+				},
+				{
+					"filename": "MoveL__2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 492,
+						"h": 409
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 18,
+						"w": 377,
+						"h": 380
+					},
+					"frame": {
+						"x": 470,
+						"y": 1,
+						"w": 377,
+						"h": 380
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:51e339e9ea97cf63443b92ea9c010823:afafd7ea8ba26829323164d6b8c54914:7654973745aee4836749f98b2a44636c$"
+	}
+}

@@ -6,6 +6,8 @@ class SceneMain extends Phaser.Scene {
     {
         this.load.image("background","assets/background.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
+        this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
+        this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
         this.load.image("Welcome","assets/Welcome.png");
         this.load.image("Left","assets/Left.png");
@@ -21,7 +23,7 @@ class SceneMain extends Phaser.Scene {
         bg.x= game.config.width/2;
 
         this.Welcome = this.add.image(0,0,"Welcome");
-        Align.scaleToGameW(this.Welcome,0.5);
+        Align.scaleToGameW(this.Welcome,0.15);
         this.Right = this.add.image(0,0,"Right");
         Align.scaleToGameW(this.Right,0.15);
         this.Left = this.add.image(0,0,"Left");
@@ -47,11 +49,22 @@ class SceneMain extends Phaser.Scene {
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.15);
         this.blockGrid.placeAtIndex(50,this.bird);
+
+        this.LeftHold = this.add.sprite(0,0,"LeftHold");
+        Align.scaleToGameW(this.LeftHold,0.15);
+        this.blockGrid.placeAtIndex(3,this.LeftHold);
+
+        this.RightHold = this.add.sprite(0,0,"RightHold");
+        Align.scaleToGameW(this.RightHold,0.15);
+        this.blockGrid.placeAtIndex(7,this.RightHold);
+
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.makeAnims();
         
         window.bird = this.bird;
+        window.LeftHold = this.LeftHold;
+        window.RightHold = this.RightHold;
         bird.play("moveR");
     }
     makeAnims() {
@@ -64,6 +77,18 @@ class SceneMain extends Phaser.Scene {
         this.anims.create({
             key: 'moveL',
             frames: this.anims.generateFrameNames("bird", {start:0, end:3, zeroPad: 3, prefix:"MoveL__", suffix: ".png"}),
+            frameRate: 10,
+            repeat: -1
+        })
+        this.anims.create({
+            key: 'left',
+            frames: this.anims.generateFrameNames("RightHold", {start:0, end:1, zeroPad: 3, prefix:"MoveR__", suffix: ".png"}),
+            frameRate: 10,
+            repeat: -1
+        })
+        this.anims.create({
+            key: 'right',
+            frames: this.anims.generateFrameNames("LeftHold", {start:0, end:1, zeroPad: 3, prefix:"MoveL__", suffix: ".png"}),
             frameRate: 10,
             repeat: -1
         })
