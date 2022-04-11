@@ -66,6 +66,8 @@ class SceneMain extends Phaser.Scene {
         window.LeftHold = this.LeftHold;
         window.RightHold = this.RightHold;
         bird.play("moveR");
+        LeftHold.play("left");
+        RightHold.play("right");
     }
     makeAnims() {
         this.anims.create({

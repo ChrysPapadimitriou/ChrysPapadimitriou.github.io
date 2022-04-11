@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "MoveR__1.png",
+					"filename": "MoveR__000.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "MoveR__2.png",
+					"filename": "MoveR__001.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
