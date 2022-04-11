@@ -12,6 +12,7 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Welcome","assets/Welcome.png");
         this.load.image("Left","assets/Left.png");
         this.load.image("UniLogo","assets/UniLogo.png");
+        this.load.image("Flag","assets/flag.png");
     }
     create() {
         let bg = this.add.image(0,0,"background");
@@ -24,6 +25,8 @@ class SceneMain extends Phaser.Scene {
 
         this.Welcome = this.add.image(0,0,"Welcome");
         Align.scaleToGameW(this.Welcome,0.20);
+        this.Flag = this.add.image(0,0,"Flag");
+        Align.scaleToGameW(this.Flag,0.20);
         this.Right = this.add.image(0,0,"Right");
         Align.scaleToGameW(this.Right,0.15);
         this.Left = this.add.image(0,0,"Left");
@@ -41,14 +44,15 @@ class SceneMain extends Phaser.Scene {
         });
         this.blockGrid.showNumbers();
 
-        this.blockGrid.placeAtIndex(16,this.Welcome);
-        this.blockGrid.placeAtIndex(103,this.Left);
-        this.blockGrid.placeAtIndex(105,this.Right);
-        this.blockGrid.placeAtIndex(49,this.Logo);
+        this.blockGrid.placeAtIndex(181,this.Welcome);
+        this.blockGrid.placeAtIndex(511,this.Flag);
+        this.blockGrid.placeAtIndex(972,this.Left);
+        this.blockGrid.placeAtIndex(974,this.Right);
+        this.blockGrid.placeAtIndex(511,this.Logo);
 
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.10);
-        this.blockGrid.placeAtIndex(89,this.bird);
+        this.blockGrid.placeAtIndex(926,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.05);
