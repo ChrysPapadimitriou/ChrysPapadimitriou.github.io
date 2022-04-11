@@ -47,7 +47,7 @@ class SceneMain extends Phaser.Scene {
         
         this.blockGrid.placeAtIndex(448,this.Left);
         this.blockGrid.placeAtIndex(452,this.Right);
-        this.blockGrid.placeAtIndex(252,this.Logo);
+
 
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
@@ -62,12 +62,12 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(76-24,this.RightHold);
 
         this.cloud = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud,0.2);
-        this.blockGrid.placeAtIndex(159,this.cloud);
+        Align.scaleToGameW(this.cloud,0.35);
+        this.blockGrid.placeAtIndex(159+0.2,this.cloud);
 
         this.cloud2 = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud2,0.2);
-        this.blockGrid.placeAtIndex(169,this.cloud2);
+        Align.scaleToGameW(this.cloud2,0.35);
+        this.blockGrid.placeAtIndex(169-0.2,this.cloud2);
 
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
@@ -76,6 +76,10 @@ class SceneMain extends Phaser.Scene {
         this.Flag = this.add.image(0,0,"Flag");
         Align.scaleToGameW(this.Flag,0.5);
         this.blockGrid.placeAtIndex(252,this.Flag);
+
+        this.Logo = this.add.image(0,0,"UniLogo");
+        Align.scaleToGameW(this.Logo,0.08);
+        this.blockGrid.placeAtIndex(252,this.Logo);
 
         window.bird = this.bird;
         window.LeftHold = this.LeftHold;
