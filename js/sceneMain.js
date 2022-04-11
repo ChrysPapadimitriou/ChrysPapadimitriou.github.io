@@ -23,7 +23,7 @@ class SceneMain extends Phaser.Scene {
         bg.x= game.config.width/2;
 
         this.Welcome = this.add.image(0,0,"Welcome");
-        Align.scaleToGameW(this.Welcome,0.15);
+        Align.scaleToGameW(this.Welcome,0.20);
         this.Right = this.add.image(0,0,"Right");
         Align.scaleToGameW(this.Right,0.15);
         this.Left = this.add.image(0,0,"Left");
@@ -51,12 +51,12 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(50,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
-        Align.scaleToGameW(this.LeftHold,0.15);
-        this.blockGrid.placeAtIndex(3,this.LeftHold);
+        Align.scaleToGameW(this.LeftHold,0.05);
+        this.blockGrid.placeAtIndex(4,this.LeftHold);
 
         this.RightHold = this.add.sprite(0,0,"RightHold");
-        Align.scaleToGameW(this.RightHold,0.15);
-        this.blockGrid.placeAtIndex(7,this.RightHold);
+        Align.scaleToGameW(this.RightHold,0.05);
+        this.blockGrid.placeAtIndex(6,this.RightHold);
 
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
