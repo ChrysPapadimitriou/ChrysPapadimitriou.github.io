@@ -65,7 +65,7 @@ class SceneMain extends Phaser.Scene {
 
         this.cloud = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud,0.05);
-        this.blockGrid.placeAtIndex(139-0.2,this.cloud);
+        this.blockGrid.placeAtIndex(159,this.cloud);
 
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
@@ -108,7 +108,7 @@ class SceneMain extends Phaser.Scene {
         })
         this.anims.create({
             key: 'move',
-            frames: this.anims.generateFrameNames("LeftHold2", {start:0, end:2, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
+            frames: this.anims.generateFrameNames("cloud", {start:0, end:2, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
             frameRate: 3,
             repeat: -1
         })
