@@ -57,7 +57,7 @@ class SceneMain extends Phaser.Scene {
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
         this.blockGrid.placeAtIndex(76-20,this.LeftHold);
-
+//
         this.RightHold2 = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold2,0.05);
         this.blockGrid.placeAtIndex(139-0.2,this.RightHold2);
