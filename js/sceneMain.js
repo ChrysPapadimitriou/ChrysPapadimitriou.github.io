@@ -48,7 +48,7 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(511,this.Flag);
         this.blockGrid.placeAtIndex(971,this.Left);
         this.blockGrid.placeAtIndex(975,this.Right);
-        this.blockGrid.placeAtIndex(510.5,this.Logo);
+        this.blockGrid.placeAtIndex(510.65,this.Logo);
 
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
@@ -56,7 +56,7 @@ class SceneMain extends Phaser.Scene {
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.05);
-        this.blockGrid.placeAtIndex(112,this.LeftHold);
+        this.blockGrid.placeAtIndex(184,this.LeftHold);
 
         this.LeftHold2 = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold2,0.05);
@@ -64,7 +64,7 @@ class SceneMain extends Phaser.Scene {
 
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.05);
-        this.blockGrid.placeAtIndex(118,this.RightHold);
+        this.blockGrid.placeAtIndex(178,this.RightHold);
 
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
@@ -76,7 +76,7 @@ class SceneMain extends Phaser.Scene {
         window.RightHold = this.RightHold;
         bird.play("moveR");
         LeftHold.play("left");
-        LeftHold2.play("left");
+        LeftHold2.play("left2");
         RightHold.play("right");
     }
     makeAnims() {
@@ -93,19 +93,19 @@ class SceneMain extends Phaser.Scene {
             repeat: -1
         })
         this.anims.create({
-            key: 'left',
+            key: 'right',
             frames: this.anims.generateFrameNames("RightHold", {start:0, end:1, zeroPad: 3, prefix:"MoveR__", suffix: ".png"}),
             frameRate: 10,
             repeat: -1
         })
         this.anims.create({
-            key: 'right',
+            key: 'left',
             frames: this.anims.generateFrameNames("LeftHold", {start:0, end:1, zeroPad: 3, prefix:"MoveL__", suffix: ".png"}),
             frameRate: 10,
             repeat: -1
         })
         this.anims.create({
-            key: 'right',
+            key: 'left2',
             frames: this.anims.generateFrameNames("LeftHold2", {start:0, end:1, zeroPad: 3, prefix:"MoveL__", suffix: ".png"}),
             frameRate: 10,
             repeat: -1
