@@ -26,8 +26,6 @@ class SceneMain extends Phaser.Scene {
 
         this.Welcome = this.add.image(0,0,"Welcome");
         Align.scaleToGameW(this.Welcome,0.20);
-        this.Flag = this.add.image(0,0,"Flag");
-        Align.scaleToGameW(this.Flag,0.5);
         this.Right = this.add.image(0,0,"Right");
         Align.scaleToGameW(this.Right,0.15);
         this.Left = this.add.image(0,0,"Left");
@@ -43,7 +41,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        this.blockGrid.showNumbers();
+        //this.blockGrid.showNumbers();
 
         this.blockGrid.placeAtIndex(76,this.Welcome);
         
@@ -69,12 +67,14 @@ class SceneMain extends Phaser.Scene {
 
         this.cloud2 = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud2,0.2);
-        this.blockGrid.placeAtIndex(186,this.cloud2);
+        this.blockGrid.placeAtIndex(169,this.cloud2);
 
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.makeAnims();
         
+        this.Flag = this.add.image(0,0,"Flag");
+        Align.scaleToGameW(this.Flag,0.5);
         this.blockGrid.placeAtIndex(252,this.Flag);
 
         window.bird = this.bird;
@@ -104,19 +104,19 @@ class SceneMain extends Phaser.Scene {
         this.anims.create({
             key: 'right',
             frames: this.anims.generateFrameNames("RightHold", {start:0, end:1, zeroPad: 3, prefix:"MoveR__", suffix: ".png"}),
-            frameRate: 10,
+            frameRate: 6,
             repeat: -1
         })
         this.anims.create({
             key: 'left',
             frames: this.anims.generateFrameNames("LeftHold", {start:0, end:1, zeroPad: 3, prefix:"MoveL__", suffix: ".png"}),
-            frameRate: 10,
+            frameRate: 6,
             repeat: -1
         })
         this.anims.create({
             key: 'move',
             frames: this.anims.generateFrameNames("cloud", {start:0, end:2, zeroPad: 3, prefix:"Move__", suffix: ".png"}),
-            frameRate: 0.5,
+            frameRate: 0.35,
             repeat: -1
         })
     }
