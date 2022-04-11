@@ -42,7 +42,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        this.blockGrid.showNumbers();
+        //this.blockGrid.showNumbers();
 
         this.blockGrid.placeAtIndex(76,this.Welcome);
         this.blockGrid.placeAtIndex(252,this.Flag);
