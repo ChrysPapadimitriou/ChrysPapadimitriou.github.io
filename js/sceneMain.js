@@ -58,9 +58,9 @@ class SceneMain extends Phaser.Scene {
         Align.scaleToGameW(this.LeftHold,0.05);
         this.blockGrid.placeAtIndex(184,this.LeftHold);
 
-        this.LeftHold2 = this.add.sprite(0,0,"LeftHold");
-        Align.scaleToGameW(this.LeftHold2,0.05);
-        this.blockGrid.placeAtIndex(375,this.LeftHold2);
+        this.RightHold2 = this.add.sprite(0,0,"RightHold");
+        Align.scaleToGameW(this.RightHold2,0.05);
+        this.blockGrid.placeAtIndex(375,this.RightHold2);
 
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.05);
@@ -72,12 +72,13 @@ class SceneMain extends Phaser.Scene {
         
         window.bird = this.bird;
         window.LeftHold = this.LeftHold;
-        window.LeftHold = this.LeftHold2;
+        window.RightHold2 = this.RightHold2;
         window.RightHold = this.RightHold;
         bird.play("moveR");
         LeftHold.play("left");
-        LeftHold2.play("left2");
         RightHold.play("right");
+        RightHold2.play("right");
+
     }
     makeAnims() {
         this.anims.create({
