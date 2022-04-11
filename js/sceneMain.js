@@ -48,11 +48,11 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(208,this.Flag);
         this.blockGrid.placeAtIndex(448,this.Left);
         this.blockGrid.placeAtIndex(452,this.Right);
-        this.blockGrid.placeAtIndex(208-0.65,this.Logo);
+        this.blockGrid.placeAtIndex(208-0.45,this.Logo);
 
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
-        this.blockGrid.placeAtIndex(356,this.bird);
+        this.blockGrid.placeAtIndex(398,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
@@ -60,7 +60,7 @@ class SceneMain extends Phaser.Scene {
 
         this.RightHold2 = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold2,0.05);
-        this.blockGrid.placeAtIndex(139,this.RightHold2);
+        this.blockGrid.placeAtIndex(139-0.2,this.RightHold2);
 
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.04);
