@@ -45,7 +45,7 @@ class SceneMain extends Phaser.Scene {
         //this.blockGrid.showNumbers();
 
         this.blockGrid.placeAtIndex(76,this.Welcome);
-        
+        this.blockGrid.placeAtIndex(252,this.Logo);
         this.blockGrid.placeAtIndex(448,this.Left);
         this.blockGrid.placeAtIndex(452,this.Right);
 
@@ -79,12 +79,8 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(252,this.Flag);
 
         this.Flag2 = this.add.image(0,0,"Flag2");
-        Align.scaleToGameW(this.Flag2,0.05);
+        Align.scaleToGameW(this.Flag2,0.15);
         this.blockGrid.placeAtIndex(266,this.Flag2);
-
-        this.Logo = this.add.image(0,0,"UniLogo");
-        Align.scaleToGameW(this.Logo,0.08);
-        this.blockGrid.placeAtIndex(252,this.Logo);
 
         window.bird = this.bird;
         window.LeftHold = this.LeftHold;
