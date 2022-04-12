@@ -14,6 +14,7 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Left","assets/Left.png");
         this.load.image("UniLogo","assets/UniLogo.png");
         this.load.image("Flag","assets/flag.png");
+        this.load.image("Flag2","assets/flag2.png");
     }
     create() {
         let bg = this.add.image(0,0,"background");
@@ -76,6 +77,10 @@ class SceneMain extends Phaser.Scene {
         this.Flag = this.add.image(0,0,"Flag");
         Align.scaleToGameW(this.Flag,0.5);
         this.blockGrid.placeAtIndex(252,this.Flag);
+
+        this.Flag2 = this.add.image(0,0,"Flag2");
+        Align.scaleToGameW(this.Flag2,0.5);
+        this.blockGrid.placeAtIndex(266,this.Flag2);
 
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.08);
