@@ -8,7 +8,13 @@ if (isMobile == -1) {
         width: window.innerWidth,
         height: window.innerHeight,
         parent: 'phaser-game',
-        scene: [SceneMain]
+        scene: [SceneMain],
+        physics: {
+        default: "arcade",
+        arcade: {
+            debug: true
+            }
+        }
     };
 } else {
     var config = {
@@ -16,7 +22,13 @@ if (isMobile == -1) {
         width: window.innerWidth,
         height: window.innerHeight,
         parent: 'phaser-game',
-        scene: [SceneMain]
+        scene: [SceneMain],
+        physics: {
+         default: "arcade",
+        arcade: {
+            debug: true
+           }
+        }
     };
 }
 var game = new Phaser.Game(config);
