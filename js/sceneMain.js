@@ -87,6 +87,8 @@ class SceneMain extends Phaser.Scene {
         window.cloud2 = this.cloud2;
         window.RightHold = this.RightHold;
         
+        this.bird.setGravityY(0);
+
         this.makeAnims();
         bird.play("moveR");
         LeftHold.play("left");
@@ -104,10 +106,10 @@ class SceneMain extends Phaser.Scene {
     }
     birdGoRight()
     {
-        this.bird.setVelocityZ(200);
+        this.bird.setVelocityY(200);
     }
     birdGoLeft(){
-        this.bird.setVelocityY(-200);
+        //this.bird.setVelocityY(-200);
     }
     makeAnims() {
         this.anims.create({
