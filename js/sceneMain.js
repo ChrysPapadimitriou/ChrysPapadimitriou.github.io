@@ -48,7 +48,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        //this.blockGrid.showNumbers();
+        this.aGrid.showNumbers();
 
         //set assets to possitions based on grid index
         this.blockGrid.placeAtIndex(76,this.Welcome);
