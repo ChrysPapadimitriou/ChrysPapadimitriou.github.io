@@ -103,14 +103,18 @@ class SceneMain extends Phaser.Scene {
     {
         this.emitter.on("GO_RIGHT",this.birdGoRight.bind(this));
         this.emitter.on("GO_LEFT",this.birdGoLeft.bind(this));
+        this.input.on("pointerup",this.stopBird.bind(this));
+    }
+    stopBird(){
+        this.bird.setVelocityX(0);
     }
     birdGoRight()
     {
-        this.bird.setVelocityX(25);
+        this.bird.setVelocityX(175);
         this.bird.play("moveR");
     }
     birdGoLeft(){
-        this.bird.setVelocityX(-25);
+        this.bird.setVelocityX(-175);
         this.bird.play("moveL");
     }
     makeAnims() {
