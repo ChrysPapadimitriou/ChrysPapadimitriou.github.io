@@ -90,6 +90,7 @@ class SceneMain extends Phaser.Scene {
         cloud2.play("move");
 
         this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
+        
     }
     makeAnims() {
         this.anims.create({

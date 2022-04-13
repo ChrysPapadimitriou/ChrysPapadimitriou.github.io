@@ -6,17 +6,21 @@ class GamePad extends UIBlock
         this.scene = config.scene;
         this.grid= config.grid;
 
-        this.Right = this.scene.add.image(0,0,"Right");
-        Align.scaleToGameW(this.Right,0.15);
-        this.grid.placeAtIndex(452,this.Right);
-        this.Left = this.scene.add.image(0,0,"Left");
-        Align.scaleToGameW(this.Left,0.15);
-        this.grid.placeAtIndex(448,this.Left);
+        this.btnRight = this.scene.add.image(0,0,"Right");
+        Align.scaleToGameW(this.btnRight,0.15);
+        this.grid.placeAtIndex(452,this.btnRight);
 
-        this.Right.setInteractive();
-        this.Left.setInteractive();
+        this.bntLeft = this.scene.add.image(0,0,"Left");
+        Align.scaleToGameW(this.bntLeft,0.15);
+        this.grid.placeAtIndex(448,this.bntLeft);
 
-        this.Right.on("pointerdown", this.goRight.bind(this));
-        this.Left.on("pointerdown", this.goLeft.bind(this));
+        this.btnRight.setInteractive();
+        this.bntLeft.setInteractive();
+
+        this.btnRight.on("pointerdown", this.goRight.bind(this));
+        this.bntLeft.on("pointerdown", this.goLeft.bind(this));
+
+        this.add(this.btnRight);
+        this.add(this.bntLeft);
     }
 }
