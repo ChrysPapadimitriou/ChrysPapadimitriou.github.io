@@ -3,6 +3,8 @@ class GamePad extends UIBlock
     constructor(config)
     {
         super();
+        this.emitter=EventDispatcher.getInstance();
+
         this.scene = config.scene;
         this.grid= config.grid;
 
@@ -25,8 +27,10 @@ class GamePad extends UIBlock
     }
     goRight() {
         console.log("go right");
+        this.emitter.emit("GO_RIGHT");
     }
     goLeft() {
         console.log("go left");
+        this.emitter.emit("GO_LEFT");
     }
 }

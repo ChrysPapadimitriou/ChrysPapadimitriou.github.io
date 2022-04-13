@@ -17,6 +17,9 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Flag2","assets/flag2.png");
     }
     create() {
+
+        this.emitter=EventDispatcher.getInstance();
+
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
         bg.displayHeight = this.sys.game.config.height;
@@ -67,8 +70,8 @@ class SceneMain extends Phaser.Scene {
 
         //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
-        console.log(frameNames);
-        this.makeAnims();
+        //onsole.log(frameNames);
+        
         
         this.Flag = this.add.image(0,0,"Flag");
         Align.scaleToGameW(this.Flag,0.5);
@@ -77,12 +80,14 @@ class SceneMain extends Phaser.Scene {
         this.Flag2 = this.add.image(0,0,"Flag2");
         Align.scaleToGameW(this.Flag2,0.15);
         this.blockGrid.placeAtIndex(266,this.Flag2);
-
+        
         window.bird = this.bird;
         window.LeftHold = this.LeftHold;
         window.cloud = this.cloud;
         window.cloud2 = this.cloud2;
         window.RightHold = this.RightHold;
+        
+        this.makeAnims();
         bird.play("moveR");
         LeftHold.play("left");
         RightHold.play("right");
@@ -90,7 +95,15 @@ class SceneMain extends Phaser.Scene {
         cloud2.play("move");
 
         this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
-        
+        this.setListeners();
+    }
+    setListeners()
+    {
+        this.emitter.on("GO_RIGHT",this.birdGoRight.bird(this));
+    }
+    birdGoRight()
+    {
+        this.bird.setVelocityZ(200);
     }
     makeAnims() {
         this.anims.create({
