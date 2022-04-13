@@ -43,8 +43,6 @@ class SceneMain extends Phaser.Scene {
         //set assets to possitions based on grid index
         this.blockGrid.placeAtIndex(76,this.Welcome);
         this.blockGrid.placeAtIndex(252,this.Logo);
-        this.blockGrid.placeAtIndex(448,this.Left);
-        this.blockGrid.placeAtIndex(452,this.Right);
 
         //add sprites
         this.bird = this.add.sprite(0,0,"bird");
