@@ -17,8 +17,8 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Flag2","assets/flag2.png");
     }
     create() {
-        let bg = this.add.image(0,0,"background");
-        Align.scaleToGameW(bg,2)
+        let bg = this.add.image(0,0,"background").setOrigin(0,0);
+        Align.scaleToGameW(bg,1)
         this.emitter=EventDispatcher.getInstance();
 
         //add backgrounds 

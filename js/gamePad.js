@@ -24,6 +24,11 @@ class GamePad extends UIBlock
 
         this.add(this.btnRight);
         this.add(this.bntLeft);
+
+        this.children.forEach(function(child)
+        {
+            child.setScrollFactor(0)
+        });
     }
     goRight() {
         console.log("go right");
