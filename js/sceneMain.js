@@ -33,8 +33,14 @@ class SceneMain extends Phaser.Scene {
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.08);
         
-        //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
+            scene:this,
+            rows:22,
+            cols:22
+        });
+
+        //set grid lines to locate positions
+        this.aGrid =new AlignGrid({
             scene:this,
             rows:22,
             cols:22,
@@ -98,6 +104,9 @@ class SceneMain extends Phaser.Scene {
 
         this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
         this.setListeners();
+
+        this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
+        this.cameras.main.startFollow(this.bird);
     }
     setListeners()
     {
