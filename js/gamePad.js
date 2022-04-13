@@ -22,6 +22,9 @@ class GamePad extends UIBlock
         this.btnRight.on("pointerdown", this.goRight.bind(this));
         this.bntLeft.on("pointerdown", this.goLeft.bind(this));
 
+        this.btnRight.alpha=.01;
+        this.bntLeft.alpha=.01;
+
         this.add(this.btnRight);
         this.add(this.bntLeft);
 

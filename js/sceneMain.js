@@ -18,7 +18,7 @@ class SceneMain extends Phaser.Scene {
     }
     create() {
         let bg = this.add.image(0,0,"background").setOrigin(0,0);
-        Align.scaleToGameW(bg,1)
+        Align.scaleToGameW(bg,2)
         this.emitter=EventDispatcher.getInstance();
 
         //add backgrounds 
