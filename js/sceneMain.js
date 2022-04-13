@@ -110,11 +110,11 @@ class SceneMain extends Phaser.Scene {
     }
     birdGoRight()
     {
-        this.bird.setVelocityX(175);
+        this.bird.setVelocityX(210);
         this.bird.play("moveR");
     }
     birdGoLeft(){
-        this.bird.setVelocityX(-175);
+        this.bird.setVelocityX(-210);
         this.bird.play("moveL");
     }
     makeAnims() {
