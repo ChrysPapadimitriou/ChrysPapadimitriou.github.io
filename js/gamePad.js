@@ -16,5 +16,8 @@ class GamePad extends UIBlock
 
         this.Right.setInteractive();
         this.Left.setInteractive();
+
+        this.Right.on("pointerdown", this.goRight.bind(this));
+        this.Left.on("pointerdown", this.goLeft.bind(this));
     }
 }
