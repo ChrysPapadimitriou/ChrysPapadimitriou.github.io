@@ -5,7 +5,7 @@ class EventDispatcher extends Phaser.Events.EventEmitter
     constructor()
     {
         super();
-        if(instancce == null)
+        if (instance==null)
         {
             instance=this;
         }
