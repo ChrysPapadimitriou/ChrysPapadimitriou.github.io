@@ -3,7 +3,7 @@ class SceneMain extends Phaser.Scene {
         super('SceneMain');
     }
     preload()
-    {
+    {   //load assets
         this.load.image("background","assets/background.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
         this.load.atlas("cloud","assets/cloud.png","assets/cloud.json");
@@ -17,20 +17,16 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Flag2","assets/flag2.png");
     }
     create() {
+        //add backgrounds 
         let bg = this.add.image(0,0,"background");
-        
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width;
-
         bg.y= game.config.height/2;
         bg.x= game.config.width/2;
 
+        //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
         Align.scaleToGameW(this.Welcome,0.20);
-        this.Right = this.add.image(0,0,"Right");
-        Align.scaleToGameW(this.Right,0.15);
-        this.Left = this.add.image(0,0,"Left");
-        Align.scaleToGameW(this.Left,0.15);
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.08);
         
@@ -44,12 +40,13 @@ class SceneMain extends Phaser.Scene {
         });
         //this.blockGrid.showNumbers();
 
+        //set assets to possitions based on grid index
         this.blockGrid.placeAtIndex(76,this.Welcome);
         this.blockGrid.placeAtIndex(252,this.Logo);
         this.blockGrid.placeAtIndex(448,this.Left);
         this.blockGrid.placeAtIndex(452,this.Right);
 
-
+        //add sprites
         this.bird = this.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
         this.blockGrid.placeAtIndex(398,this.bird);
@@ -70,6 +67,7 @@ class SceneMain extends Phaser.Scene {
         Align.scaleToGameW(this.cloud2,0.35);
         this.blockGrid.placeAtIndex(169-0.2,this.cloud2);
 
+        //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
         console.log(frameNames);
         this.makeAnims();
@@ -92,6 +90,8 @@ class SceneMain extends Phaser.Scene {
         RightHold.play("right");
         cloud.play("move");
         cloud2.play("move");
+
+        this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
     }
     makeAnims() {
         this.anims.create({
