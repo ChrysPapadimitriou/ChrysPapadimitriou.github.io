@@ -17,15 +17,16 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Flag2","assets/flag2.png");
     }
     create() {
-
+        let bg = this.add.image(0,0,"background");
+        Align.scaleToGameW(bg,2)
         this.emitter=EventDispatcher.getInstance();
 
         //add backgrounds 
-        let bg = this.add.image(0,0,"background");
-        bg.displayHeight = this.sys.game.config.height;
-        bg.displayWidth = this.sys.game.config.width;
-        bg.y= game.config.height/2;
-        bg.x= game.config.width/2;
+        
+       // bg.displayHeight = this.sys.game.config.height;
+        //bg.displayWidth = this.sys.game.config.width;
+        //bg.y= game.config.height/2;
+        //bg.x= game.config.width/2;
 
         //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
