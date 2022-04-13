@@ -99,11 +99,15 @@ class SceneMain extends Phaser.Scene {
     }
     setListeners()
     {
-        this.emitter.on("GO_RIGHT",this.birdGoRight.bird(this));
+        this.emitter.on("GO_RIGHT",this.birdGoRight.bind(this));
+        this.emitter.on("GO_LEFT",this.birdGoLeft.bind(this));
     }
     birdGoRight()
     {
         this.bird.setVelocityZ(200);
+    }
+    birdGoLeft(){
+        this.bird.setVelocityY(-200);
     }
     makeAnims() {
         this.anims.create({
