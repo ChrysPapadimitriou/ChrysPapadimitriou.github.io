@@ -52,8 +52,8 @@ class SceneMain extends Phaser.Scene {
             scene:this,
             rows:22,
             cols:22,
-            height:bg.displayHeight,
-            width:bg.displayWidth
+            //height:bg.displayHeight,
+            //width:bg.displayWidth
         });
         this.blockGrid.showNumbers();
 
