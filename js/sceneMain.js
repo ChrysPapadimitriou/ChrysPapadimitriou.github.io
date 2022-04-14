@@ -112,8 +112,8 @@ class SceneMain extends Phaser.Scene {
         this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
         this.setListeners();
 
-        this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
-        this.cameras.main.startFollow(this.bird);
+        //this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
+        //this.cameras.main.startFollow(this.bird);
     }
     setListeners()
     {
