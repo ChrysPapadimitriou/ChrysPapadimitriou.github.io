@@ -40,21 +40,22 @@ class SceneMain extends Phaser.Scene {
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.08);
         
-        this.blockGrid =new AlignGrid({
+ /*       this.blockGrid =new AlignGrid({
             scene:this,
             rows:22,
             cols:22
-        });
+            
+        });*/
 
         //set grid lines to locate positions
-        this.aGrid =new AlignGrid({
+        this.blockGrid =new AlignGrid({
             scene:this,
             rows:22,
             cols:22,
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        this.aGrid.showNumbers();
+        this.blockGrid.showNumbers();
 
         //set assets to possitions based on grid index
         this.blockGrid.placeAtIndex(76,this.Welcome);
