@@ -19,7 +19,6 @@ class SceneMain extends Phaser.Scene {
     create() {
 
         this.emitter=EventDispatcher.getInstance();
-        Align.scaleToGameW(bg);
         //add backgrounds 
         let bg = this.add.image(0,0,"background").setOrigin(0,0);
         bg.displayHeight = this.sys.game.config.height;
