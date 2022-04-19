@@ -21,7 +21,6 @@ class SceneMain extends Phaser.Scene {
         this.emitter=EventDispatcher.getInstance();
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
-        Align.scaleToGameW(bg,4);
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width*4;
         bg.y= game.config.height/2;
@@ -36,10 +35,10 @@ class SceneMain extends Phaser.Scene {
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
             scene:this,
-            rows:44,
-            cols:44,
+            rows:22,
+            cols:22,
             height:bg.displayHeight,
-            width:bg.displayWidth
+            width:bg.displayWidth/2
         });
         this.blockGrid.showNumbers();
 
