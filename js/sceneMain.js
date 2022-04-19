@@ -4,7 +4,7 @@ class SceneMain extends Phaser.Scene {
     }
     preload()
     {   //load assets
-        this.load.image("background","assets/background.png");
+        this.load.image("background","assets/background1.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
         this.load.atlas("cloud","assets/cloud.png","assets/cloud.json");
         this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
@@ -20,7 +20,7 @@ class SceneMain extends Phaser.Scene {
 
         this.emitter=EventDispatcher.getInstance();
         //add backgrounds 
-        let bg = this.add.image(0,0,"background");
+        let bg = this.add.image(0,0,"background").setOrigin(0,0);
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width*4;
         bg.y= game.config.height/2;
@@ -35,10 +35,10 @@ class SceneMain extends Phaser.Scene {
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
             scene:this,
-            rows:22,
-            cols:55,
-            height: bg.y,
-            width:bg.x
+            rows:44,
+            cols:44,
+            height:bg.displayHeight,
+            width:bg.displayWidth
         });
         this.blockGrid.showNumbers();
 
