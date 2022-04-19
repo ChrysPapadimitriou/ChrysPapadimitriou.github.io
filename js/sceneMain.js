@@ -20,12 +20,11 @@ class SceneMain extends Phaser.Scene {
 
         this.emitter=EventDispatcher.getInstance();
         //add backgrounds 
-        let bg = this.add.image(0,0,"background").setOrigin(0,0);
+        let bg = this.add.image(0,0,"background");
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width*4;
         bg.y= game.config.height/2;
         bg.x= game.config.width/2;
-        Align.scaleToGameW(bg);
 
         //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
