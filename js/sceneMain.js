@@ -22,10 +22,11 @@ class SceneMain extends Phaser.Scene {
 
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
-        bg.displayHeight = this.sys.game.config.height;
+        Align.scaleToGameW(bg);
+/*        bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width;
         bg.y= game.config.height/2;
-        bg.x= game.config.width/2;
+        bg.x= game.config.width/2;*/
 
         //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
@@ -41,7 +42,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        //this.blockGrid.showNumbers();
+        this.blockGrid.showNumbers();
 
         //set assets to possitions based on grid index
         this.blockGrid.placeAtIndex(76,this.Welcome);
@@ -98,6 +99,9 @@ class SceneMain extends Phaser.Scene {
 
         this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
         this.setListeners();
+
+        this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
+        this.cameras.main.startFollow(this.bird);
     }
     setListeners()
     {
