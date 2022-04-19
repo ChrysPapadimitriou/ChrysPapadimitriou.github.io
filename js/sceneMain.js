@@ -28,7 +28,7 @@ class SceneMain extends Phaser.Scene {
 
         //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
-        Align.scaleToGameW(this.Welcome,0.20);
+        Align.scaleToGameW(this.Welcome,0.8);
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.08);
         
@@ -43,13 +43,13 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.showNumbers();
 
         //set assets to possitions based on grid index
-        this.blockGrid.placeAtIndex(508,this.Welcome);
+        this.blockGrid.placeAtIndex(501,this.Welcome);
         this.blockGrid.placeAtIndex(252,this.Logo);
 
         //add sprites
         this.bird = this.physics.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
-        this.blockGrid.placeAtIndex(888,this.bird);
+        this.blockGrid.placeAtIndex(881,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
