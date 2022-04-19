@@ -21,8 +21,8 @@ class SceneMain extends Phaser.Scene {
         this.emitter=EventDispatcher.getInstance();
 
         //add backgrounds 
-        let bg = this.add.image(0,0,"background");
-        Align.scaleToGameW(bg);
+        let bg = this.add.image(0,0,"background").setOrigin(0,0);
+        Align.scaleToGameW(bg,1.3);
 /*        bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width;
         bg.y= game.config.height/2;
@@ -71,7 +71,6 @@ class SceneMain extends Phaser.Scene {
 
         //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
-        //onsole.log(frameNames);
         
         
         this.Flag = this.add.image(0,0,"Flag");
@@ -114,11 +113,11 @@ class SceneMain extends Phaser.Scene {
     }
     birdGoRight()
     {
-        this.bird.setVelocityX(210);
+        this.bird.setVelocityX(270);
         this.bird.play("moveR");
     }
     birdGoLeft(){
-        this.bird.setVelocityX(-210);
+        this.bird.setVelocityX(-270);
         this.bird.play("moveL");
     }
     makeAnims() {
