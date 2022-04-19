@@ -36,7 +36,7 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid =new AlignGrid({
             scene:this,
             rows:22,
-            cols:55,
+            cols:31,
             height:bg.displayHeight,
             width:bg.displayWidth
         });
