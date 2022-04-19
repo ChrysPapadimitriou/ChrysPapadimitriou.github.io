@@ -19,16 +19,16 @@ class SceneMain extends Phaser.Scene {
     create() {
 
 
-        this.emitter=EventDispatcher.getInstance();
+        
 
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
         //Align.scaleToGameW(bg,1);
-        bg.displayHeight = this.sys.game.config.height;
-        bg.displayWidth = this.sys.game.config.width;
-        bg.y= game.config.height/2;
-        bg.x= game.config.width/2;
-
+        //bg.displayHeight = this.sys.game.config.height;
+        //bg.displayWidth = this.sys.game.config.width;
+        //bg.y= game.config.height/2;
+        //bg.x= game.config.width/2;
+        this.emitter=EventDispatcher.getInstance();
         //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
         Align.scaleToGameW(this.Welcome,0.20);
@@ -40,8 +40,8 @@ class SceneMain extends Phaser.Scene {
             scene:this,
             rows:22,
             cols:22,
-            height:bg.displayHeight,
-            width:bg.displayWidth
+            //height:bg.displayHeight,
+            //width:bg.displayWidth
         });
         this.blockGrid.showNumbers();
 
