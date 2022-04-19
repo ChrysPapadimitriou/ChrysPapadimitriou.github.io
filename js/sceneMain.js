@@ -19,7 +19,7 @@ class SceneMain extends Phaser.Scene {
     create() {
 
 
-        
+        this.emitter=EventDispatcher.getInstance();
 
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
@@ -28,7 +28,7 @@ class SceneMain extends Phaser.Scene {
         //bg.displayWidth = this.sys.game.config.width;
         //bg.y= game.config.height/2;
         //bg.x= game.config.width/2;
-        this.emitter=EventDispatcher.getInstance();
+        
         //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
         Align.scaleToGameW(this.Welcome,0.20);
@@ -97,10 +97,10 @@ class SceneMain extends Phaser.Scene {
         cloud2.play("move");
 
         this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
-        this.setListeners();
+        //this.setListeners();
 
-        this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
-        this.cameras.main.startFollow(this.bird);
+        //this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
+        //this.cameras.main.startFollow(this.bird);
     }
     setListeners()
     {
