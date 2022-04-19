@@ -18,17 +18,15 @@ class SceneMain extends Phaser.Scene {
     }
     create() {
 
-
         this.emitter=EventDispatcher.getInstance();
 
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
-        //Align.scaleToGameW(bg,1);
-        //bg.displayHeight = this.sys.game.config.height;
-        //bg.displayWidth = this.sys.game.config.width;
-        //bg.y= game.config.height/2;
-        //bg.x= game.config.width/2;
-        
+        bg.displayHeight = this.sys.game.config.height;
+        bg.displayWidth = this.sys.game.config.width;
+        bg.y= game.config.height/2;
+        bg.x= game.config.width/2;
+
         //add assets
         this.Welcome = this.add.image(0,0,"Welcome");
         Align.scaleToGameW(this.Welcome,0.20);
@@ -40,10 +38,10 @@ class SceneMain extends Phaser.Scene {
             scene:this,
             rows:22,
             cols:22,
-            //height:bg.displayHeight,
-            //width:bg.displayWidth
+            height:bg.displayHeight,
+            width:bg.displayWidth
         });
-        this.blockGrid.showNumbers();
+        //this.blockGrid.showNumbers();
 
         //set assets to possitions based on grid index
         this.blockGrid.placeAtIndex(76,this.Welcome);
@@ -57,7 +55,7 @@ class SceneMain extends Phaser.Scene {
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
         this.blockGrid.placeAtIndex(76-20,this.LeftHold);
-
+//
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.04);
         this.blockGrid.placeAtIndex(76-24,this.RightHold);
@@ -72,6 +70,8 @@ class SceneMain extends Phaser.Scene {
 
         //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
+        //onsole.log(frameNames);
+        
         
         this.Flag = this.add.image(0,0,"Flag");
         Align.scaleToGameW(this.Flag,0.5);
@@ -97,10 +97,7 @@ class SceneMain extends Phaser.Scene {
         cloud2.play("move");
 
         this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
-        //this.setListeners();
-
-        //this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
-        //this.cameras.main.startFollow(this.bird);
+        this.setListeners();
     }
     setListeners()
     {

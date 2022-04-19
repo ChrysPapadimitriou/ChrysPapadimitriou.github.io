@@ -8,7 +8,7 @@ class GamePad extends UIBlock
         this.scene = config.scene;
         this.grid= config.grid;
 
-        this.btnRight = this.scene.add.image(0,0,"Welcome");
+        this.btnRight = this.scene.add.image(0,0,"Right");
         Align.scaleToGameW(this.btnRight,0.15);
         this.grid.placeAtIndex(452,this.btnRight);
 
@@ -22,16 +22,8 @@ class GamePad extends UIBlock
         this.btnRight.on("pointerdown", this.goRight.bind(this));
         this.bntLeft.on("pointerdown", this.goLeft.bind(this));
 
-        this.btnRight.alpha=.01;
-        this.bntLeft.alpha=.01;
-
         this.add(this.btnRight);
         this.add(this.bntLeft);
-
-       /* this.children.forEach(function(child)
-        {
-            child.setScrollFactor(0)
-        });*/
     }
     goRight() {
         console.log("go right");
