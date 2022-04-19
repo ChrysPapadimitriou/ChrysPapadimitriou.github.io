@@ -35,8 +35,8 @@ class SceneMain extends Phaser.Scene {
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
             scene:this,
-            rows:32,
-            cols:32,
+            rows:22,
+            cols:55,
             height:bg.displayHeight,
             width:bg.displayWidth
         });
