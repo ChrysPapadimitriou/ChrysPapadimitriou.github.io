@@ -23,7 +23,7 @@ class SceneMain extends Phaser.Scene {
         let bg = this.add.image(0,0,"background");
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width*6;
-        bg.y= game.config.height/1.8;
+        bg.y= game.config.height/2;
         bg.x= game.config.width*3;
 
         //add assets
@@ -35,7 +35,7 @@ class SceneMain extends Phaser.Scene {
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
             scene:this,
-            rows:55,
+            rows:44,
             cols:110,
             height:bg.displayHeight,
             width:bg.displayWidth
