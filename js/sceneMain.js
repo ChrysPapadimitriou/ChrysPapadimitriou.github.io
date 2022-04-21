@@ -22,7 +22,7 @@ class SceneMain extends Phaser.Scene {
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
         bg.displayHeight = this.sys.game.config.height;
-        bg.displayWidth = this.sys.game.config.width*2;
+        bg.displayWidth = this.sys.game.config.width*4;
         bg.y= game.config.height/2;
         bg.x= game.config.width/2;
 
