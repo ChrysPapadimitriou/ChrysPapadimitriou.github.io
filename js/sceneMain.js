@@ -4,7 +4,7 @@ class SceneMain extends Phaser.Scene {
     }
     preload()
     {   //load assets
-        this.load.image("background","assets/background.png");
+        this.load.image("background","assets/background3.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
         this.load.atlas("cloud","assets/cloud.png","assets/cloud.json");
         this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
@@ -35,7 +35,7 @@ class SceneMain extends Phaser.Scene {
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
             scene:this,
-            rows:22,
+            rows:55,
             cols:55,
             height:bg.displayHeight,
             width:bg.displayWidth
