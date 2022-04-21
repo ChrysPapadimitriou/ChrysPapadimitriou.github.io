@@ -24,7 +24,7 @@ class SceneMain extends Phaser.Scene {
         Align.scaleToGameW(bg,3);
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width*2;
-        bg.y= game.config.height;
+        bg.y= game.config.height/2;
         bg.x= game.config.width;
 
         //add assets
