@@ -26,12 +26,6 @@ class SceneMain extends Phaser.Scene {
         bg.y= game.config.height/2;
         bg.x= game.config.width*3;
 
-        //add assets
-        this.Welcome = this.add.image(0,0,"Welcome");
-        Align.scaleToGameW(this.Welcome,0.8);
-        this.Logo = this.add.image(0,0,"UniLogo");
-        Align.scaleToGameW(this.Logo,0.08);
-        
         //set grid lines to locate positions
         this.blockGrid =new AlignGrid({
             scene:this,
@@ -42,9 +36,25 @@ class SceneMain extends Phaser.Scene {
         });
         this.blockGrid.showNumbers();
 
-        //set assets to possitions based on grid index
+        //add assets
+        this.Welcome = this.add.image(0,0,"Welcome");
+        Align.scaleToGameW(this.Welcome,0.8);
         this.blockGrid.placeAtIndex(1989,this.Welcome);
+
+        this.Logo = this.add.image(0,0,"UniLogo");
+        Align.scaleToGameW(this.Logo,0.08);
         this.blockGrid.placeAtIndex(252,this.Logo);
+
+        this.Flag = this.add.image(0,0,"Flag");
+        Align.scaleToGameW(this.Flag,0.5);
+        this.blockGrid.placeAtIndex(252,this.Flag);
+
+        this.Flag2 = this.add.image(0,0,"Flag2");
+        Align.scaleToGameW(this.Flag2,0.15);
+        this.blockGrid.placeAtIndex(266,this.Flag2);
+
+        this.info = this.add.text(0,0, "Chrysovalantis Papadimitriou Resume",{font:"Georgia"});
+        this.blockGrid.placeAtIndex(2652,this.info);
 
         //add sprites
         this.bird = this.physics.add.sprite(0,0,"bird");
@@ -71,13 +81,7 @@ class SceneMain extends Phaser.Scene {
         var frameNames = this.textures.get("bird").getFrameNames();
         
         
-        this.Flag = this.add.image(0,0,"Flag");
-        Align.scaleToGameW(this.Flag,0.5);
-        this.blockGrid.placeAtIndex(252,this.Flag);
 
-        this.Flag2 = this.add.image(0,0,"Flag2");
-        Align.scaleToGameW(this.Flag2,0.15);
-        this.blockGrid.placeAtIndex(266,this.Flag2);
         
         window.bird = this.bird;
         window.LeftHold = this.LeftHold;
