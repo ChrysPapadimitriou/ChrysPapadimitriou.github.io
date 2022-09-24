@@ -47,11 +47,19 @@ class SceneMain extends Phaser.Scene {
 
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.23);
-        this.blockGrid.placeAtIndex(1898.2,this.Logo);
+        this.blockGrid.placeAtIndex(1788.1,this.Logo);
+
+        this.Msc = this.add.text(0,0, "MASTER OF SCIENCE BIG DATA ANALYTICS",{font:"Georgia"});
+        Align.scaleToGameW(this.Msc,2);
+        this.blockGrid.placeAtIndex(1898,this.Msc);
 
         this.Logo2 = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo2,0.23);
-        this.blockGrid.placeAtIndex(1901.2,this.Logo2);
+        this.blockGrid.placeAtIndex(1801.1,this.Logo2);
+
+        this.Bsc = this.add.text(0,0, "BACHELOR OF SCIENCE COMPUTER SCIENCE AND PROGRAMMING",{font:"Georgia"});
+        Align.scaleToGameW(this.Bsc,2);
+        this.blockGrid.placeAtIndex(1898,this.Bsc);
 
         this.Flag2 = this.add.image(0,0,"Flag2");
         Align.scaleToGameW(this.Flag2,0.15);
