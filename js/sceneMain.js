@@ -10,8 +10,8 @@ class SceneMain extends Phaser.Scene {
         this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
         this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
-     /*   this.load.image("Welcome","assets/Welcome.png");
         this.load.image("Left","assets/Left.png");
+     /*   this.load.image("Welcome","assets/Welcome.png");
         this.load.image("UniLogo","assets/UniLogo.png");
         this.load.image("UniLogoMsc","assets/UniLogoMsc.png");
         this.load.image("Flag","assets/flag.png");
@@ -23,7 +23,7 @@ class SceneMain extends Phaser.Scene {
         //add backgrounds 
         let bg = this.add.image(0,0,"background");
         bg.displayHeight = this.sys.game.config.height;
-        bg.displayWidth = this.sys.game.config.width*6;
+        bg.displayWidth = this.sys.game.config.width*4;
         bg.y= game.config.height/2;
         bg.x= game.config.width*3;
 
