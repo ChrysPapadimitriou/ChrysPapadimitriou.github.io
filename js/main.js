@@ -3,6 +3,7 @@ if (isMobile == -1) {
     isMobile = navigator.userAgent.indexOf("Tablet");
 }
 if (isMobile == -1) {
+    screen.orientation.lock('landscape');
     var config = {
         type: Phaser.AUTO,
         width: window.innerWidth,
@@ -32,3 +33,4 @@ if (isMobile == -1) {
     };
 }
 var game = new Phaser.Game(config);
+
