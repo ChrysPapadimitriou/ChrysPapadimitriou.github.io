@@ -52,8 +52,8 @@ class SceneMain extends Phaser.Scene {
         this.Msc2 = this.add.text(0,0, "BIG DATA ANALYTICS",{font:"Georgia"});
         this.blockGrid.placeAtIndex(2557.02,this.Msc);
         this.blockGrid.placeAtIndex(2778,this.Msc2);
-        Align.scaleToGameW(this.Msc,0.25);
-        Align.scaleToGameW(this.Msc2,0.25);
+        Align.scaleToGameW(this.Msc,0.05);
+        Align.scaleToGameW(this.Msc2,0.05);
 
         this.Logo2 = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo2,0.23);
@@ -62,15 +62,16 @@ class SceneMain extends Phaser.Scene {
         this.Bsc2 = this.add.text(0,0, "COMPUTER SCIENCE AND PROGRAMMING",{font:"Georgia"});
         this.blockGrid.placeAtIndex(2560.02,this.Bsc);
         this.blockGrid.placeAtIndex(2781,this.Bsc2);
-        Align.scaleToGameW(this.Bsc,1.25);
-        Align.scaleToGameW(this.Bsc2,1.25);
+        Align.scaleToGameW(this.Bsc,0.05);
+        Align.scaleToGameW(this.Bsc2,0.05);
 
         this.Flag2 = this.add.image(0,0,"Flag2");
         Align.scaleToGameW(this.Flag2,0.15);
         this.blockGrid.placeAtIndex(266,this.Flag2);
 
         this.info = this.add.text(0,0, "Chrysovalantis Papadimitriou Resume",{font:"Georgia"});
-        this.blockGrid.placeAtIndex(2652,this.info);
+        this.blockGrid.placeAtIndex(2650,this.info);
+        Align.scaleToGameW(this.info,0.05);
 
         //add sprites
         this.bird = this.physics.add.sprite(0,0,"bird");
