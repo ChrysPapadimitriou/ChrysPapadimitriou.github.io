@@ -13,6 +13,7 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Welcome","assets/Welcome.png");
         this.load.image("Left","assets/Left.png");
         this.load.image("UniLogo","assets/UniLogo.png");
+        this.load.image("UniLogoBsc","assets/UniLogoBsc.png");
         this.load.image("Flag","assets/flag.png");
         this.load.image("Flag2","assets/flag2.png");
     }
@@ -45,7 +46,7 @@ class SceneMain extends Phaser.Scene {
         Align.scaleToGameW(this.Flag,0.5);
         this.blockGrid.placeAtIndex(2011,this.Flag);
 
-        this.Logo = this.add.image(0,0,"UniLogo");
+        this.Logo = this.add.image(0,0,"UniLogoBsc");
         Align.scaleToGameW(this.Logo,0.23);
         this.blockGrid.placeAtIndex(1788.1,this.Logo);
         this.Msc = this.add.text(0,0, "MASTER OF SCIENCE",{font:"Georgia"});
