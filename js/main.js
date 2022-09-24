@@ -20,7 +20,6 @@ if (isMobile == -1) {
 } else {
     var config = {
         type: Phaser.AUTO,
-        orientation: Phaser.Scale.Orientation.LANDSCAPE,
         width: window.innerWidth,
         height: window.innerHeight,
         parent: 'phaser-game',

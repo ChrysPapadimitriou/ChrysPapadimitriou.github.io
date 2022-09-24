@@ -43,7 +43,7 @@ class SceneMain extends Phaser.Scene {
 
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.08);
-        this.blockGrid.placeAtIndex(252,this.Logo);
+        this.blockGrid.placeAtIndex(2008,this.Logo);
 
         this.Flag = this.add.image(0,0,"Flag");
         Align.scaleToGameW(this.Flag,0.5);
