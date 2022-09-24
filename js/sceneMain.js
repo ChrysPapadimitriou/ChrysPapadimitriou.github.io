@@ -47,7 +47,7 @@ class SceneMain extends Phaser.Scene {
 
         this.Flag = this.add.image(0,0,"Flag");
         Align.scaleToGameW(this.Flag,0.5);
-        this.blockGrid.placeAtIndex(252,this.Flag);
+        this.blockGrid.placeAtIndex(2011,this.Flag);
 
         this.Flag2 = this.add.image(0,0,"Flag2");
         Align.scaleToGameW(this.Flag2,0.15);
@@ -59,7 +59,7 @@ class SceneMain extends Phaser.Scene {
         //add sprites
         this.bird = this.physics.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
-        this.blockGrid.placeAtIndex(881,this.bird);
+        this.blockGrid.placeAtIndex(3749,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
