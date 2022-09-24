@@ -35,7 +35,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-       // this.blockGrid.showNumbers();
+        this.blockGrid.showNumbers();
 
         //add assets
         /*this.Welcome = this.add.image(0,0,"Welcome");
