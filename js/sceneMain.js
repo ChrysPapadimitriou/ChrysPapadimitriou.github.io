@@ -48,18 +48,22 @@ class SceneMain extends Phaser.Scene {
         this.Logo = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo,0.23);
         this.blockGrid.placeAtIndex(1788.1,this.Logo);
-
-        this.Msc = this.add.text(0,0, "MASTER OF SCIENCE BIG DATA ANALYTICS",{font:"Georgia"});
-        //Align.scaleToGameW(this.Msc,2);
+        this.Msc = this.add.text(0,0, "MASTER OF SCIENCE",{font:"Georgia"});
+        this.Msc2 = this.add.text(0,0, "BIG DATA ANALYTICS",{font:"Georgia"});
         this.blockGrid.placeAtIndex(2557.02,this.Msc);
+        this.blockGrid.placeAtIndex(2778,this.Msc2);
+        Align.scaleToGameW(this.Msc,1.25);
+        Align.scaleToGameW(this.Msc2,1.25);
 
         this.Logo2 = this.add.image(0,0,"UniLogo");
         Align.scaleToGameW(this.Logo2,0.23);
-        this.blockGrid.placeAtIndex(1791.1,this.Logo2);
-
+        this.blockGrid.placeAtIndex(1791.07,this.Logo2);
         this.Bsc = this.add.text(0,0, "BACHELOR OF SCIENCE COMPUTER SCIENCE AND PROGRAMMING",{font:"Georgia"});
-        //Align.scaleToGameW(this.Bsc,2);
+        this.Bsc2 = this.add.text(0,0, "COMPUTER SCIENCE AND PROGRAMMING",{font:"Georgia"});
         this.blockGrid.placeAtIndex(2560.02,this.Bsc);
+        this.blockGrid.placeAtIndex(2781,this.Bsc2);
+        Align.scaleToGameW(this.Bsc,1.25);
+        Align.scaleToGameW(this.Bsc2,1.25);
 
         this.Flag2 = this.add.image(0,0,"Flag2");
         Align.scaleToGameW(this.Flag2,0.15);
