@@ -5,6 +5,9 @@ if (isMobile == -1) {
 if (isMobile == -1) {
     var config = {
         type: Phaser.AUTO,
+        orientation: Phaser.Scale.Orientation.LANDSCAPE,
+        width: window.innerWidth,
+        height: window.innerHeight,
         parent: 'phaser-game',
         scene: [SceneMain],
         physics: {
@@ -13,20 +16,11 @@ if (isMobile == -1) {
             debug: true
             }
         },
-        scene:{
-            preload: preload,
-            create: create,
-            update: update
-        },
-        Scale:{
-            orientation: Phaser.Scale.Orientation.LANDSCAPE,
-            width: window.innerWidth,
-            height: window.innerHeight,
-        }
     };
 } else {
     var config = {
         type: Phaser.AUTO,
+        orientation: Phaser.Scale.Orientation.LANDSCAPE,
         width: window.innerWidth,
         height: window.innerHeight,
         parent: 'phaser-game',
@@ -37,16 +31,6 @@ if (isMobile == -1) {
             debug: true
            }
         },
-        scene:{
-            preload: preload,
-            create: create,
-            update: update
-        },
-        Scale:{
-            orientation: Phaser.Scale.Orientation.LANDSCAPE,
-            width: window.innerWidth,
-            height: window.innerHeight
-        }
     };
 }
 var game = new Phaser.Game(config);
