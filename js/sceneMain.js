@@ -10,12 +10,12 @@ class SceneMain extends Phaser.Scene {
         this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
         this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
-        this.load.image("Welcome","assets/Welcome.png");
+     /*   this.load.image("Welcome","assets/Welcome.png");
         this.load.image("Left","assets/Left.png");
         this.load.image("UniLogo","assets/UniLogo.png");
         this.load.image("UniLogoMsc","assets/UniLogoMsc.png");
         this.load.image("Flag","assets/flag.png");
-        this.load.image("Flag2","assets/flag2.png");
+        this.load.image("Flag2","assets/flag2.png"); */
     }
     create() {
 
