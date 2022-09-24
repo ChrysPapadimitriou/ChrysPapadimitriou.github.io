@@ -14,7 +14,7 @@ class GamePad extends UIBlock
 
         this.bntLeft = this.scene.add.image(0,0,"Left");
         Align.scaleToGameW(this.bntLeft,0.25);
-        this.grid.placeAtIndex(4303,this.bntLeft);
+        this.grid.placeAtIndex(4304,this.bntLeft);
 
         this.btnRight.setInteractive();
         this.bntLeft.setInteractive();
