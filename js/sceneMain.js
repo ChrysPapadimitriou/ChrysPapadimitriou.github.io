@@ -49,19 +49,27 @@ class SceneMain extends Phaser.Scene {
 //
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.07);
-        this.blockGrid.placeAtIndex(1026.65,this.RightHold);
+        this.blockGrid.placeAtIndex(1026.5,this.RightHold);
 
         this.cloud = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud,0.30);
-        this.blockGrid.placeAtIndex(388,this.cloud);
+        this.blockGrid.placeAtIndex(388-0.05,this.cloud);
 
         this.cloud2 = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud2,0.30);
-        this.blockGrid.placeAtIndex(393,this.cloud2);
+        this.blockGrid.placeAtIndex(393-0.5,this.cloud2);
         
         this.cloud3 = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud3,0.30);
-        this.blockGrid.placeAtIndex(398-0.4,this.cloud3);
+        this.blockGrid.placeAtIndex(398-0.45,this.cloud3);
+
+        this.cloud4 = this.add.sprite(0,0,"cloud");
+        Align.scaleToGameW(this.cloud4,0.30);
+        this.blockGrid.placeAtIndex(1009,this.cloud4);
+
+        this.cloud5 = this.add.sprite(0,0,"cloud");
+        Align.scaleToGameW(this.cloud5,0.30);
+        this.blockGrid.placeAtIndex(1020.3,this.cloud5);
         //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
         
@@ -73,6 +81,8 @@ class SceneMain extends Phaser.Scene {
         window.cloud = this.cloud;
         window.cloud2 = this.cloud2;
         window.cloud3 = this.cloud3;
+        window.cloud4 = this.cloud4;
+        window.cloud5 = this.cloud5;
         window.RightHold = this.RightHold;
         
         this.bird.setGravityY(0);
@@ -90,6 +100,8 @@ class SceneMain extends Phaser.Scene {
         cloud.play("move");
         cloud2.play("move");
         cloud3.play("move");
+        cloud4.play("move");
+        cloud5.play("move");
 
     }
     setListeners()
