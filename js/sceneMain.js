@@ -104,7 +104,7 @@ class SceneMain extends Phaser.Scene {
         cloud.play("move");
         cloud2.play("move");
 
-        this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
+        this.gamePad=new GamePad({scene:this, blockGrid:this.blockGrid});
         this.setListeners();
 
         this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);

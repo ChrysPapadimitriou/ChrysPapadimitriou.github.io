@@ -6,7 +6,7 @@ class GamePad extends UIBlock
         this.emitter=EventDispatcher.getInstance();
 
         this.scene = config.scene;
-        this.grid= config.grid;
+        this.grid= config.blockGrid;
 
         this.btnRight = this.scene.add.image(0,0,"Right");
         Align.scaleToGameW(this.btnRight,0.15);
