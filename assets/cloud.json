@@ -50,27 +50,6 @@
 						"w": 472,
 						"h": 184
 					}
-				},
-				{
-					"filename": "Move__002.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 900,
-						"h": 600
-					},
-					"spriteSourceSize": {
-						"x": 155,
-						"y": 214,
-						"w": 366,
-						"h": 164
-					},
-					"frame": {
-						"x": 1066,
-						"y": 1,
-						"w": 366,
-						"h": 164
-					}
 				}
 			]
 		}
