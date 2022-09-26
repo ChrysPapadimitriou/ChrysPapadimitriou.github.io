@@ -65,7 +65,7 @@ class SceneMain extends Phaser.Scene {
         //add sprites
         this.bird = this.physics.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
-        this.blockGrid.placeAtIndex(3974,this.bird);
+        this.blockGrid.placeAtIndex(3749,this.bird);
 
         /*this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
@@ -97,6 +97,13 @@ class SceneMain extends Phaser.Scene {
         
         this.bird.setGravityY(0);
 
+        this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
+        this.setListeners();
+
+        this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
+        this.cameras.main.startFollow(this.bird);
+
+
         this.makeAnims();
         bird.play("moveR");
         LeftHold.play("left");
@@ -104,11 +111,7 @@ class SceneMain extends Phaser.Scene {
         cloud.play("move");
         cloud2.play("move");
 
-        this.gamePad=new GamePad({scene:this, blockGrid:this.blockGrid});
-        this.setListeners();
 
-        this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
-        this.cameras.main.startFollow(this.bird);
     }
     setListeners()
     {
