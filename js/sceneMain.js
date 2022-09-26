@@ -30,7 +30,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        this.blockGrid.showNumbers();
+        //this.blockGrid.showNumbers();
 
         //add assets
         //add sprites
@@ -44,7 +44,7 @@ class SceneMain extends Phaser.Scene {
 //
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.07);
-        this.blockGrid.placeAtIndex(1026.2,this.RightHold);
+        this.blockGrid.placeAtIndex(1026.25,this.RightHold);
 
         this.cloud = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud,0.30);
@@ -52,11 +52,11 @@ class SceneMain extends Phaser.Scene {
 
         this.cloud2 = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud2,0.30);
-        this.blockGrid.placeAtIndex(393-0.4,this.cloud2);
+        this.blockGrid.placeAtIndex(393-0.30,this.cloud2);
         
         this.cloud3 = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud3,0.30);
-        this.blockGrid.placeAtIndex(398-0.45,this.cloud3);
+        this.blockGrid.placeAtIndex(398-0.40,this.cloud3);
 
         this.cloud4 = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud4,0.23);
