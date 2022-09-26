@@ -38,51 +38,30 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.showNumbers();
 
         //add assets
-        /*this.Welcome = this.add.image(0,0,"Welcome");
-        Align.scaleToGameW(this.Welcome,0.8);
-        this.blockGrid.placeAtIndex(1989,this.Welcome);
-
-        this.Flag = this.add.image(0,0,"Flag");
-        Align.scaleToGameW(this.Flag,0.5);
-        this.blockGrid.placeAtIndex(2011,this.Flag);
-
-        this.Logo = this.add.image(0,0,"UniLogoMsc");
-        Align.scaleToGameW(this.Logo,0.23);
-        this.blockGrid.placeAtIndex(1788.1,this.Logo);
-
-        this.Logo2 = this.add.image(0,0,"UniLogo");
-        Align.scaleToGameW(this.Logo2,0.23);
-        this.blockGrid.placeAtIndex(1791.07,this.Logo2);
-
-        this.Flag2 = this.add.image(0,0,"Flag2");
-        Align.scaleToGameW(this.Flag2,0.15);
-        this.blockGrid.placeAtIndex(266,this.Flag2);
-
-        this.info = this.add.text(0,0, "Chrysovalantis Papadimitriou Resume",{font:"Georgia"});
-        this.blockGrid.placeAtIndex(2650,this.info);
-        Align.scaleToGameW(this.info,1);
-*/
         //add sprites
         this.bird = this.physics.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
-        this.blockGrid.placeAtIndex(3749,this.bird);
+        this.blockGrid.placeAtIndex(3742,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
-        this.blockGrid.placeAtIndex(4193,this.LeftHold);
+        this.blockGrid.placeAtIndex(705,this.LeftHold);
 //
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.04);
-        this.blockGrid.placeAtIndex(4195,this.RightHold);
+        this.blockGrid.placeAtIndex(688,this.RightHold);
 
         this.cloud = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud,0.20);
-        this.blockGrid.placeAtIndex(799+0.2,this.cloud);
+        Align.scaleToGameW(this.cloud,0.25);
+        this.blockGrid.placeAtIndex(609.5,this.cloud);
 
         this.cloud2 = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud2,0.20);
-        this.blockGrid.placeAtIndex(704,this.cloud2);
-
+        Align.scaleToGameW(this.cloud2,0.25);
+        this.blockGrid.placeAtIndex(618.5,this.cloud2);
+        
+        this.cloud3 = this.add.sprite(0,0,"cloud");
+        Align.scaleToGameW(this.cloud3,0.25);
+        this.blockGrid.placeAtIndex(625.6,this.cloud3);
         //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
         
