@@ -35,7 +35,7 @@ class SceneMain extends Phaser.Scene {
             height:bg.displayHeight,
             width:bg.displayWidth
         });
-        this.blockGrid.showNumbers();
+        //this.blockGrid.showNumbers();
 
         //add assets
         //add sprites
@@ -49,7 +49,7 @@ class SceneMain extends Phaser.Scene {
 //
         this.RightHold = this.add.sprite(0,0,"RightHold");
         Align.scaleToGameW(this.RightHold,0.07);
-        this.blockGrid.placeAtIndex(1026.5,this.RightHold);
+        this.blockGrid.placeAtIndex(1026.1,this.RightHold);
 
         this.cloud = this.add.sprite(0,0,"cloud");
         Align.scaleToGameW(this.cloud,0.30);
@@ -64,12 +64,12 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(398-0.45,this.cloud3);
 
         this.cloud4 = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud4,0.30);
-        this.blockGrid.placeAtIndex(1009,this.cloud4);
+        Align.scaleToGameW(this.cloud4,0.20);
+        this.blockGrid.placeAtIndex(1009.1,this.cloud4);
 
         this.cloud5 = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud5,0.30);
-        this.blockGrid.placeAtIndex(1020.3,this.cloud5);
+        Align.scaleToGameW(this.cloud5,0.20);
+        this.blockGrid.placeAtIndex(1020.8,this.cloud5);
         //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
         
