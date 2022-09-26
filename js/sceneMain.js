@@ -44,23 +44,23 @@ class SceneMain extends Phaser.Scene {
         this.blockGrid.placeAtIndex(3742,this.bird);
 
         this.LeftHold = this.add.sprite(0,0,"LeftHold");
-        Align.scaleToGameW(this.LeftHold,0.04);
+        Align.scaleToGameW(this.LeftHold,0.15);
         this.blockGrid.placeAtIndex(705,this.LeftHold);
 //
         this.RightHold = this.add.sprite(0,0,"RightHold");
-        Align.scaleToGameW(this.RightHold,0.04);
+        Align.scaleToGameW(this.RightHold,0.15);
         this.blockGrid.placeAtIndex(688,this.RightHold);
 
         this.cloud = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud,0.25);
-        this.blockGrid.placeAtIndex(609.5,this.cloud);
+        Align.scaleToGameW(this.cloud,0.35);
+        this.blockGrid.placeAtIndex(610,this.cloud);
 
         this.cloud2 = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud2,0.25);
+        Align.scaleToGameW(this.cloud2,0.35);
         this.blockGrid.placeAtIndex(618.5,this.cloud2);
         
         this.cloud3 = this.add.sprite(0,0,"cloud");
-        Align.scaleToGameW(this.cloud3,0.25);
+        Align.scaleToGameW(this.cloud3,0.35);
         this.blockGrid.placeAtIndex(625.6,this.cloud3);
         //testing anims
         var frameNames = this.textures.get("bird").getFrameNames();
