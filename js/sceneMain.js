@@ -4,7 +4,7 @@ class SceneMain extends Phaser.Scene {
     }
     preload()
     {   //load assets
-        this.load.image("background","assets/map2.png");
+        this.load.image("background","assets/mao3.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
         this.load.atlas("cloud","assets/cloud.png","assets/cloud.json");
         this.load.atlas("LeftHold","assets/LeftHold.png","assets/LeftHold.json");
