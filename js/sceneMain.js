@@ -96,9 +96,7 @@ class SceneMain extends Phaser.Scene {
         window.RightHold = this.RightHold;
         
         this.bird.setGravityY(0);
-        this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
-        this.setListeners();
-        
+
         this.makeAnims();
         bird.play("moveR");
         LeftHold.play("left");
@@ -107,7 +105,8 @@ class SceneMain extends Phaser.Scene {
         cloud2.play("move");
         
 
-
+        this.gamePad=new GamePad({scene:this, grid:this.blockGrid});
+        this.setListeners();
         this.cameras.main.setBounds(0,0,bg.displayWidth,bg.displayHeight);
         this.cameras.main.startFollow(this.bird);
 
