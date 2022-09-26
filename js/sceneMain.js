@@ -65,7 +65,7 @@ class SceneMain extends Phaser.Scene {
         //add sprites
         this.bird = this.physics.add.sprite(0,0,"bird");
         Align.scaleToGameW(this.bird,0.09);
-        this.blockGrid.placeAtIndex(3749,this.bird);
+        this.blockGrid.placeAtIndex(3974,this.bird);
 
         /*this.LeftHold = this.add.sprite(0,0,"LeftHold");
         Align.scaleToGameW(this.LeftHold,0.04);
