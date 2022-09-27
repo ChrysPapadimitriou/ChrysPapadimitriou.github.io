@@ -15,12 +15,6 @@ class SceneMain extends Phaser.Scene {
         this.load.image("Left","assets/Left.png");
         this.load.image("bar","assets/bar.png");
 
-        this.handlerScene = this.scene.get('handler');
-        this.handlerScene.sceneRunning = 'SceneMain';
-        this.sceneStopped = false;
-        this.handlerScene.resize(this);
-        this.handlerScene.resizerListener(this);
-
         let loadingBar = this.add.graphics({
             fillStyle: { color:0xFFFF00}
         })
