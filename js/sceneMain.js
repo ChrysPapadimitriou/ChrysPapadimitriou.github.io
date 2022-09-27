@@ -4,6 +4,8 @@ class SceneMain extends Phaser.Scene {
     }
     preload()
     {   //load assets
+        this.createLoadingBar();
+        
         this.load.image("background","assets/mao3.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
         this.load.atlas("cloud","assets/cloud.png","assets/cloud.json");
@@ -11,6 +13,30 @@ class SceneMain extends Phaser.Scene {
         this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
         this.load.image("Left","assets/Left.png");
+    }
+    createLoadingBar()
+    {
+        this.title = new Text(this,75,"Loading Resume",0,5);
+
+        this.text_progress = new Text(
+            this,
+            this.config.centerX,
+            this.config.centerY -5,
+            "Loading...",
+            "preload",
+            {x:0.5,y:1} 
+        );
+
+        this.load.on("progress",this.onProgress,this);
+
+        this.bird = this.physics.add.sprite(0,0,"bird");
+    }
+    onProgress(val)
+    {
+        this.progress.clear();
+        this.progress.fillStyle("0xFFFFF",1);
+        this.progress.fillRect(0,0,width*val, height);
+        this.text_progress.setText(Math.round(val * 100)+"%");
     }
     create() {
 
