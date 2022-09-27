@@ -33,10 +33,10 @@ class SceneMain extends Phaser.Scene {
     {
         let w = game.config.width - 2*this.progress.x;
         let h = game.config.height;
-        
+
         this.progress.clear();
         this.progress.fillStyle("0xFFFFF",1);
-        this.progress.fillRect(0,0,width*val, height);
+        this.progress.fillRect(0,0,w*val, h);
         this.text_progress.setText(Math.round(val * 100)+"%");
     }
     create() {
