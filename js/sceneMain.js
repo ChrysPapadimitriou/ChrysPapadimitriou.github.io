@@ -12,11 +12,13 @@ class SceneMain extends Phaser.Scene {
         this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
         this.load.image("Left","assets/Left.png");
+        this.load.image("bar","assets/bar.png");
 
         let loadingBar = this.add.graphics({
-            fillStyle: { color:0xffffff}
+            fillStyle: { color:0xFFFF00}
         })
 
+        this.bar = this.add.image(100,200,"bar");
         this.load.on("progress", (percent)=>{
             loadingBar.fillRect(0,this.game.renderer.height /2, this.game.renderer.width * percent,50);
             console.log(percent);
