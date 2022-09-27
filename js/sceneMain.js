@@ -16,7 +16,7 @@ class SceneMain extends Phaser.Scene {
         this.load.image("bar","assets/bar.png");
 
         this.handlerScene = this.scene.get('handler');
-        this.handlerScene.sceneRunning = 'SCENE NAME';
+        this.handlerScene.sceneRunning = 'SceneMain';
         this.sceneStopped = false;
         this.handlerScene.resize(this);
         this.handlerScene.resizerListener(this);
