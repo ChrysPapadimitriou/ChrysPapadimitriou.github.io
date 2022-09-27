@@ -18,7 +18,12 @@ class SceneMain extends Phaser.Scene {
             fillStyle: { color:0xFFFF00}
         })
 
-        this.bar = this.add.image(this.game.renderer.height /2,this.game.renderer.width/2,"bar");
+        //this.bar = this.add.image(this.game.renderer.height /2,this.game.renderer.width/2,"bar");
+        let bg = this.add.image(0,0,"background");
+        bg.displayHeight = this.sys.game.config.height;
+        bg.displayWidth = this.sys.game.config.width*6;
+        bg.y= game.config.height/2;
+        bg.x= game.config.width*3;
         this.load.on("progress", (percent)=>{
             loadingBar.fillRect(0,this.game.renderer.height /2, this.game.renderer.width * (percent/2),50);
             console.log(percent);
