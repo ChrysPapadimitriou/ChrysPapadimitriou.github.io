@@ -16,20 +16,12 @@ class SceneMain extends Phaser.Scene {
     }
     createLoadingBar()
     {
-        this.title = new Text(this,75,"Loading Resume",0,5);
-
-        this.text_progress = new Text(
-            this,
-            this.config.centerX,
-            this.config.centerY -5,
-            "Loading...",
-            "preload",
-            {x:0.5,y:1} 
-        );
-
+        let bg = this.add.image(0,0,"background");
+        bg.displayHeight = this.sys.game.config.height;
+        bg.displayWidth = this.sys.game.config.width;
         this.load.on("progress",this.onProgress,this);
 
-        this.bird = this.physics.add.sprite(0,0,"bird");
+        //this.bird = this.physics.add.sprite(0,0,"bird");
     }
     onProgress(val)
     {
