@@ -19,6 +19,12 @@ class SceneMain extends Phaser.Scene {
         let bg = this.add.image(0,0,"background");
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width;
+        bg.y= game.config.height/2;
+        bg.x= game.config.width;
+        this.load.on("progress",this.onProgress,this);
+        let x = 10;
+        let y = game.config.width;
+        this.progress = this.add.graphics({x:x,y:y});
         this.load.on("progress",this.onProgress,this);
 
         //this.bird = this.physics.add.sprite(0,0,"bird");
