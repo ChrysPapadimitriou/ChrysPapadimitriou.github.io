@@ -23,8 +23,7 @@ class SceneMain extends Phaser.Scene {
         let bg = this.add.image(0,0,"background1");
         bg.displayHeight = this.sys.game.config.height;
         bg.displayWidth = this.sys.game.config.width;
-        bg.y= game.config.height/2;
-        bg.x= game.config.width;
+        
         this.load.on("progress", (percent)=>{
             loadingBar.fillRect(0,this.game.renderer.height /2, this.game.renderer.width * (percent/2),50);
             console.log(percent);
