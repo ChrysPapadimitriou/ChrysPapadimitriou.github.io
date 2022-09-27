@@ -4,8 +4,7 @@ class SceneMain extends Phaser.Scene {
     }
     preload()
     {   //load assets
-        this.createLoadingBar();
-        
+
         this.load.image("background","assets/mao3.png");
         this.load.atlas("bird","assets/bird.png","assets/bird.json");
         this.load.atlas("cloud","assets/cloud.png","assets/cloud.json");
@@ -13,31 +12,15 @@ class SceneMain extends Phaser.Scene {
         this.load.atlas("RightHold","assets/RightHold.png","assets/RightHold.json");
         this.load.image("Right","assets/Right.png");
         this.load.image("Left","assets/Left.png");
-    }
-    createLoadingBar()
-    {
-        let bg = this.add.image(0,0,"background");
-        bg.displayHeight = this.sys.game.config.height;
-        bg.displayWidth = this.sys.game.config.width;
-        bg.y= game.config.height/2;
-        bg.x= game.config.width;
-        this.load.on("progress",this.onProgress,this);
-        let x = 10;
-        let y = game.config.width;
-        this.progress = this.add.graphics({x:x,y:y});
-        this.load.on("progress",this.onProgress,this);
 
-        //this.bird = this.physics.add.sprite(0,0,"bird");
-    }
-    onProgress(val)
-    {
-        let w = game.config.width - 2*this.progress.x;
-        let h = game.config.height;
+        let loadingBar = this.add.graphics({
+            fillStyle: { color:0xffffff}
+        })
 
-        this.progress.clear();
-        this.progress.fillStyle("0xFFFFF",1);
-        this.progress.fillRect(0,0,w*val, h);
-        this.text_progress.setText(Math.round(val * 100)+"%");
+        this.load.on("progress", (percent)=>{
+            loadingBar.fillRect(0,this.game.renderer.height /2, this.game.renderer.width * percent,50);
+            console.log(percent);
+        } )
     }
     create() {
 
